@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context="cc.ixcc.novelthree.ui.fragment.myFragment.MineFragment">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/title"
+        style="@style/TitleBarStyle"
+        app:lineVisible="false"
+        app:title="提现详情" />
+    
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="13dp"
+        android:src="@mipmap/withdraw_succ_img"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp">
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10.00"
+            android:textColor="#ff0a1c33"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:layout_marginLeft="4dp"
+            android:textColor="#ff606266"
+            android:textSize="14sp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="提现成功"
+        android:textColor="#ff606266"
+        android:textSize="14sp"
+        />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="29dp"
+        android:background="#F2F4F5"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <TextView
+            android:id="@+id/timestr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="到账时间"
+            android:textColor="#ff303133"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="2020-6-10  4:30"
+            android:textColor="#ff909399"
+            android:textSize="12sp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <TextView
+            android:id="@+id/typestr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="到账方式"
+            android:textColor="#ff303133"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="微信"
+            android:textColor="#ff909399"
+            android:textSize="12sp"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:layout_marginTop="37dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_board_blue5"
+        android:text="我知道了"
+        android:textColor="#eb515d"
+        android:textSize="14sp"
+        />
+</LinearLayout>

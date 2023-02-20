@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/dialog_ui_round_size"
+    app:cardElevation="0px"
+    tools:context="cc.ixcc.novelthree.ui.dialog.UIDialog">
+
+    <LinearLayout
+        android:id="@+id/ll_ui_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Bind Email"
+            android:textColor="@color/books_name"
+            android:textSize="17sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/tv_input_message"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/bg_dialog_invite"
+            android:hint="Mailbox"
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            tools:context="cc.ixcc.novelthree.ui.dialog.InputDialog" />
+
+        <TextView
+            android:id="@+id/btn_commit"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Bind" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

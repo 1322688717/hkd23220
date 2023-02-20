@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App 样式中引用的颜色 -->
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#303133</color>
+    <color name="colorAccent">#303133</color>
+    <color name="windowBackground">#F4F4F4</color>
+    <color name="nb.theme.background">@color/white</color>
+    <!-- 原色bf43ff-->
+    <color name="colorProgress">#b541ff</color>
+
+    <color name="colorsing">#f59074</color>
+
+    <color name="colorRadiusPressed">#b541ff</color>
+    <!-- 按钮按压时的颜色 -->
+    <color name="colorButtonPressed">#b541ff</color>
+    <color name="colorButtonDefault">#b541ff</color>
+    <!-- 按钮禁用时的颜色 -->
+    <color name="colorButtonDisable">#b541ff</color>
+
+    <!-- 按钮按压时的颜色 -->
+    <color name="colorButtonPressedwchet">#ffffff</color>
+    <color name="colorButtonDefaultwchet">#ffffff</color>
+    <!-- 按钮禁用时的颜色 -->
+    <color name="colorButtonDisablewchet">#e5e5e5</color>
+
+    <!-- 对话框确认按钮文本颜色 -->
+    <color name="colorConfirm">#b541ff</color>
+    <color name="colorText2">#0A1B33</color>
+    <color name="colorText">#5F6165</color>
+    <color name="colorCancel">#5F6165</color>
+
+    <color name="colorTitle">#b0b0b0</color>
+    <color name="textColor">#303133</color>
+    <color name="colorContent">#999999</color>
+    <color name="colorSubContent">#909399</color>
+    <color name="textColorHint">#bfc2cc</color>
+    <color name="gray1">#969696</color>
+
+    <!-- 分割线的颜色 -->
+    <color name="colorLine">#edeff2</color>
+    <color name="colorBoard">#f9f9f9</color>
+    <color name="colorbg">#F2F5F8</color>
+    <color name="colorRed">#b541ff</color>
+    <drawable name="t1">#FFFFFF</drawable>
+
+    <color name="colorYellow">#FFEC8B</color>
+    <color name="white">#ffffffff</color>f9f9f9
+    <color name="nav">#fff9f9f9</color>
+    <color name="huodong">#f9f9f9</color>
+    <color name="halfColorPrimary">#aa2C2C2C</color>
+    <color name="black">#000000</color>
+    <color name="red">#ffff0000</color>
+    <color name="dark_red">#ff8c1c1c</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent2">#CC000000</color>
+    <color name="light_gray">#ffececec</color>
+    <color name="light_yellow">#fffff99e</color>
+    <color name="dark_gray">#ff999999</color>
+    <color name="green">#ff95c81c</color>
+    <color name="orange">#ffefa600</color>
+    <color name="silver">#ffecebe8</color>
+    <color name="gray">#ff7f7f7f</color>
+    <color name="skyblue">#87CEEB</color>
+    <color name="full_transparent">#00000000</color>
+    <color name="half_transparent">#aa000000</color>
+    <color name="background_color">#eeeeee</color>
+    <color name="list_item_divider">#cccccc</color>
+    <color name="divider">#9c9c9c</color>
+    <color name="text_color">#000000</color>
+    <color name="text_color_pressed">#ffffff</color>
+    <color name="text_title_color">#444444</color>
+    <color name="menu_background">#d3d7d4</color>
+    <color name="toolpop_background">#b0000000</color>
+    <color name="shelf_background">#DA955A</color>
+    <color name="shelf_myNavigationColor">#86471B</color>
+    <!-- Reader Color -->
+    <color name="reader_default_bg_toolbar">#CC000000</color>
+    <color name="reader_default_bg_yellow">#CFBEB6</color>
+    <color name="reader_default_bg_black">#090C13</color>
+    <color name="reader_default_text_light">#32414E</color>
+    <color name="reader_default_text_dark">#444444</color>
+    <color name="read_background">#FAF9DE</color>
+    <color name="read_background_paperYellow">#D4C5A3</color>
+    <color name="read_textColor">#9c9c9c</color>
+    <color name="read_background_dfd">#56b086</color>
+
+    <color name="read_dialog_bg">#2C2C2C</color>
+    <color name="read_dialog_button_select">#E25754</color>
+
+    <color name="day_night">#19191A</color>
+    <color name="read_bg_default">#E7E7E7</color>
+    <color name="read_bg_1">#DED9C5</color>
+    <color name="read_bg_2">#D4E0C6</color>
+    <color name="read_bg_3">#CCD8E4</color>
+    <color name="read_bg_4">#F9D4D4</color>
+
+    <color name="day_night_huyan">#0F0F10</color>
+    <color name="read_bg_default_huyan">#E9E1DB</color>
+    <color name="read_bg_1_huyan">#E0DBC9</color>
+    <color name="read_bg_2_huyan">#D8E0CA</color>
+    <color name="read_bg_3_huyan">#D2DAE2</color>
+    <!--    <color name="read_bg_4_huyan">#3F3E3D</color>-->
+    <color name="read_bg_4_huyan">#F8D2CB</color>
+
+    <color name="read_font_night">#5D5757</color>
+    <!--    <color name="read_font_default">#2C2C2C</color>-->
+    <!--    <color name="read_font_1">#2F332D</color>-->
+    <!--    <color name="read_font_2">#92918C</color>-->
+    <!--    <color name="read_font_3">#383429</color>-->
+    <!--    <color name="read_font_4">#627176</color>   -->
+    <color name="read_font_default">#303133</color>
+    <color name="read_font_1">#303133</color>
+    <color name="read_font_2">#303133</color>
+    <color name="read_font_3">#303133</color>
+    <color name="read_font_4">#303133</color>
+
+    <color name="lineColor">#60d3d3d3</color>
+    <!-- UI Color -->
+    <color name="myPrimaryColor">#27cc8a</color>
+    <color name="myPrimaryDarkColor">#27cc8a</color>
+    <color name="myAccentColor">#fe5151</color>
+    <color name="myDrawerBackground">#F2F2F2</color>
+    <color name="myWindowBackground">#F5F5F5</color>
+    <color name="myTextPrimaryColor">#FFFFFF</color>
+    <color name="mySearchToggleColor">#7F7F7F</color>
+    <!-- Navigation Color is 30% black mask attack to primary color -->
+    <color name="myNavigationColor">#27cc8a</color>
+    <color name="myNavigationColorWhite">#B2B2B2</color>
+    <color name="batterry">#606266</color>
+    <!--    <color name="day_night">#001C27</color>-->
+    <color name="day_night1">#FF0000</color>
+    <color name="red_point">#F5325E</color>
+
+    <color name="day">#E7E7E7</color>
+    <color name="board_bg">#606266</color>
+    <color name="board_bg_s">#303133</color>
+    <color name="line">#DEDFE2</color>
+    <color name="dialog_night">#CDCDCD</color>
+    <color name="line_night">#B9B8B8</color>
+    <!--    <color name="nb.scroll_refresh.tip">#88303F9F</color>-->
+
+    <!--common-->
+    <!--    <color name="transparent">#00000000</color>-->
+    <color name="translucent">#99343434</color>
+    <!--    <color name="white">#ffffff</color>-->
+    <!--    <color name="red">#FF0000</color>-->
+    <!--    <color name="orange">#DE6014</color>-->
+    <!--    <color name="gray">#b8b8b8</color>-->
+    <!--    <color name="green">#5FB236</color>-->
+    <!--    <color name="black">#000000</color>-->
+    <color name="light_pink">#fb9090</color>
+    <color name="light_white">#EEEEEE</color>
+    <color name="light_coffee">#A58D5E</color>
+    <color name="light_red">#b541ff</color>
+    <color name="light_blue">#039BE5</color>
+    <color name="light_translucent">#23000000</color>
+    <color name="common_gray">#EEEEEE</color>
+
+    <!--list-->
+    <color name="nb.divider.common">#727272</color>
+    <color name="nb.divider.dash">@color/light_white</color>
+    <!--通用分割线细-->
+    <color name="nb.divider.narrow">#E3E3E3</color>
+    <!--通用分割线粗-->
+    <color name="nb.divider.wide">@color/light_white</color>
+
+
+    <!--text-->
+
+    <color name="nb.text.default">@color/black</color>
+    <!--通用一级标题的颜色-->
+    <color name="nb.text.common_h1">#212121</color>
+    <!--通用二级标题的颜色-->
+    <color name="nb.text.common_h2">#727272</color>
+    <!--通用三级标题的颜色-->
+    <color name="nb.text.common_h3">#B2B2B2</color>
+
+    <color name="nb.text.user_name">@color/light_coffee</color>
+    <color name="translucent_text">#96ffffff</color>
+
+    <!--button-->
+    <color name="nb.widget.button.normal">@color/white</color>
+    <color name="nb.widget.button.selected">#E3E3E3</color>
+
+    <!--性别选择颜色值-->
+    <color name="gender_select_boy_normal">#B0E2FF</color>
+    <color name="gender_select_boy_pressed">#B2DFEE</color>
+    <color name="gender_select_girl_normal">#EEA9B8</color>
+    <color name="gender_select_girl_pressed">#EEA2AD</color>
+
+    <!---->
+    <color name="nb.popup.text.selected">@color/light_pink</color>
+    <!---->
+    <color name="nb.scroll_refresh.tip">#88303F9F</color>
+    <!--downlaod-->
+    <color name="nb.download.loading">#8bd715</color>
+    <color name="nb.download.pause">#f3aa41</color>
+    <color name="nb.download.wait">#afafad</color>
+    <color name="nb.download.error">#e33a35</color>
+    <color name="nb.download.finish">#8bd715</color>
+
+    <!--read-->
+    <color name="nb.read.bg_1">#e1cba7</color>
+    <color name="nb.read.bg_2">#e6e1c8</color>
+    <color name="nb.read.bg_3">#443d3d</color>
+    <color name="nb.read.bg_4">#f6f6f6</color>
+    <color name="nb.read.bg_5">#dde5c8</color>
+    <color name="nb.read.bg_6">#000000</color>
+
+
+    <color name="nb.read.font_1">#2C2C2C</color>
+    <color name="nb.read.font_2">#2F332D</color>
+    <color name="nb.read.font_3">#92918C</color>
+    <color name="nb.read.font_4">#383429</color>
+    <color name="nb.read.font_5">#627176</color>
+
+    <color name="nb.read.bg.night">#000000</color>
+    <color name="nb.read.font_night">#99ffffff</color>
+
+    <color name="nb.read.menu.bg">#ffffff</color>
+    <color name="nb.read.menu.text">#2d2d2d</color>
+    <color name="nb.read.bar.translucent">#88000000</color>
+    <color name="benefitColor">#606266</color>
+    <color name="stroke">#e0e0e0</color>
+    <color name="solid_gold">#fdf5e6</color>
+    <color name="stroke_gold">#dfc68f</color>
+    <color name="ColorBookVip">#CC9C4C</color>
+    <color name="ColorTextGoOpen">#564523</color>
+    <color name="colorVipTit">#cf9950</color>
+    <color name="colorCoinNum">#b541ff</color>
+    <color name="colorCoinText">#7c7c7c</color>
+    <color name="classfication_bg">#F8F8F8</color>
+
+    <color name="colorPrimary1">#b541ff</color>
+    <color name="colorPrimaryDark1">#ff727d</color>
+    <color name="colorAccent1">#FF4081</color>
+
+    <color name="line_gray">#dcdcdc</color>
+    <color name="line_gray_light">#f1f1f1</color>
+    <color name="gray_page_bg">#ecedf1</color>
+    <color name="gray_text">#5b5b5b</color>
+    <color name="gray_text_dark">#292929</color>
+    <color name="gray_text_light">#e5e5e5</color>
+    <color name="window_half_transparent">#90000000</color>
+    <color name="blue_white">#0eabe5</color>
+
+    <color name="pay_tip">#999999</color>
+
+    <!-- 点赞 -->
+    <color name="dz">#eb515d</color>
+
+    <!-- 支付-->
+    <color name="pay_money">#6c6c6c</color>
+    <!-- 书籍详情页 -->
+    <color name="books_name">#39383d</color>
+    <color name="books_tags">#8c8c8c</color>
+    <color name="books_adds">#acacac</color>
+    <color name="books_comment_book">#f9f9f9</color>
+    <color name="books_pingfen_book">#fffcad0f</color>
+    <color name="books_jianjie">#666666</color>
+    <!-- settings -->
+    <color name="settings_name">#39383e</color>
+    <color name="settings_title">#b0b0b0</color>
+    <color name="settings_border">#efeef3</color>
+
+    <color name="tagSelect_bg">#ffffff</color>
+    <color name="tagSelected_bg">#f6f6f6</color>
+
+    <color name="tagSelect">#39383d</color>
+    <color name="tagSelected">#b541ff</color>
+
+    <color name="maintitleSelect">#39383d</color>
+    <color name="tm_black">#80000000</color>
+    <color name="text_color_theme">#f55793</color>
+    <color name="tm_white">#D9FFFFFF</color>
+</resources>

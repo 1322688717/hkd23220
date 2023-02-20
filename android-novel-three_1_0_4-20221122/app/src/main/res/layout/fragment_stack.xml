@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:id="@+id/alllayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <cc.ixcc.novelthree.widget.ArcImageView
+                        android:id="@+id/bg_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!--            <RelativeLayout-->
+                    <!--                android:layout_width="match_parent"-->
+                    <!--                android:layout_height="match_parent">-->
+
+                    <cc.ixcc.novelthree.widget.CustomViewpager
+                        android:id="@+id/vp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="65dp" />
+                    <!--            </RelativeLayout>-->
+                </RelativeLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <LinearLayout
+                android:id="@+id/rl_top"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <!--        <com.google.android.material.tabs.TabLayout-->
+                <!--            android:id="@+id/tablayout"-->
+                <!--            android:layout_width="match_parent"-->
+                <!--            android:layout_height="match_parent"-->
+                <!--            android:layout_marginLeft="20dp"-->
+                <!--            android:layout_marginRight="10dp"-->
+                <!--            android:layout_toLeftOf="@id/search"-->
+                <!--            app:tabIndicatorColor="@color/white"-->
+                <!--            android:paddingTop="13dp"-->
+                <!--            android:paddingBottom="2dp"-->
+                <!--            app:tabIndicatorHeight="2dp"-->
+                <!--            app:tabMode="scrollable"-->
+                <!--            app:tabSelectedTextColor="@color/white"-->
+                <!--            app:tabTextColor="@color/white" />-->
+
+                <com.androidkun.xtablayout.XTabLayout
+                    android:id="@+id/tablayout"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="1"
+                    app:xTabBackgroundColor="@color/transparent"
+                    app:xTabDisplayNum="0"
+                    app:xTabDividerColor="@color/transparent"
+                    app:xTabDividerHeight="15dp"
+                    app:xTabDividerWidth="0dp"
+                    app:xTabDividerWidthWidthText="false"
+                    app:xTabIndicatorColor="#ffffff"
+                    app:xTabIndicatorHeight="3dp"
+                    app:xTabIndicatorWidth="16dp"
+                    app:xTabMinWidth="0dp"
+                    app:xTabMode="scrollable"
+                    app:xTabSelectedTextColor="#ffffff"
+                    app:xTabSelectedTextSize="21sp"
+                    app:xTabTextBold="false"
+                    app:xTabTextColor="#ffffff"
+                    app:xTabTextSelectedBold="true"
+                    app:xTabTextSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:padding="10dp"
+                    android:src="@mipmap/search_icon" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

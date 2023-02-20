@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/book_leaner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/pl_userImg"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_default_portrait" />
+
+        <ImageView
+            android:id="@+id/vip_img"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignRight="@id/pl_userImg"
+            android:layout_alignBottom="@id/pl_userImg"
+            android:src="@mipmap/mine_girl"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/book_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/pl_userImg"
+            android:text="Sasha Doolah"
+            android:textColor="@color/books_name"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/pl_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8.0"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/books_pingfen_book"
+                android:textSize="12sp" />
+
+            <cc.ixcc.novelthree.utils.StarBar
+                android:id="@+id/starBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                ratingbar:isSelection="2"
+                ratingbar:starCount="5"
+                ratingbar:starDistance="3dp"
+                ratingbar:starEmpty="@drawable/stars_icon_50"
+                ratingbar:starFill="@drawable/stars_icon"
+                ratingbar:starSize="10dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/book_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Jarden is starting to piss me off."
+        android:textColor="#ff303133"
+        android:textSize="14sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp">
+
+
+        <TextView
+            android:id="@+id/pl_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5-15 23:00"
+            android:textColor="@color/settings_title"
+            android:textSize="10sp" />
+
+        <LinearLayout
+            android:id="@+id/dz_imgNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/un_dz"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/dz_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="18"
+                android:textColor="@color/settings_title"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F2F5F8" />
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="cc.ixcc.novelthree.ui.activity.my.ReadPreferencesActivity">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/title"
+        style="@style/TitleBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:lineVisible="false" />
+
+    <TextView
+        android:id="@+id/like_lx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Choose the type you like"
+        android:textColor="@color/books_name"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/like_lx"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Recommend what you like"
+        android:textColor="@color/settings_title"
+        android:textSize="12sp" />
+    <LinearLayout
+        android:id="@+id/vt0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/tv">
+        <ImageView
+            android:id="@+id/def_boy"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:src="@mipmap/boy_def" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/vt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vt0">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Male"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/settings_title"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/vt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vt1"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/def_girl"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_below="@id/def_boy"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/girl_def" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/vt3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vt2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Female"
+            android:textStyle="bold"
+            android:textColor="@color/settings_title"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/Next_but"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/btn_with"
+        android:text="Next"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/read_trend_bg" />
+
+</RelativeLayout>

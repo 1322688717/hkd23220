@@ -1,0 +1,54 @@
+buildscript {
+    ext {
+        ext.kotlin_version = '1.4.32'
+    }
+    repositories {
+        //友盟
+        maven { url 'https://repo1.maven.org/maven2/' }
+        //advance相关引用的maven依赖根目录地址，需配置在最前面，防止依赖找不到
+        maven { url 'https://s01.oss.sonatype.org/content/groups/public' }
+        maven{url 'https://maven.aliyun.com/nexus/content/groups/public/'}
+        maven { url "https://jitpack.io" }
+
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.gms:google-services:4.3.10'
+//        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'me.tatarka:gradle-retrolambda:3.6.0'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0'
+        classpath 'com.android.tools.build:gradle:7.0.3'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0' // add plugin
+        // AOP 配置插件：https://github.com/xuexiangjys/XAOP
+        classpath 'com.github.xuexiangjys.XAOP:xaop-plugin:1.0.5'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+        //Android垃圾代码生成插件
+        classpath "com.github.qq549631030:android-junk-code:1.1.2"
+    }
+}
+
+allprojects {
+    repositories {
+        // 支付宝 SDK AAR 包所需的配置
+        flatDir {
+            dirs 'libs'
+        }
+        maven{url 'https://maven.aliyun.com/nexus/content/groups/public/'}
+        maven { url "https://jitpack.io" }
+
+        google()
+        jcenter()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+task assemble{}
+
+
+

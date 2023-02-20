@@ -1,0 +1,634 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.8.9 built on Monday Mar 14, 2016 at 21:18:16 GMT
+---- Dump Properties ---
+Dump file: ajcore.20220919.163046.870.txt
+Dump reason: org.aspectj.apache.bcel.classfile.ClassFormatException
+Dump on exception: true
+Dump at exit condition: abort
+---- Exception Information ---
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'META-INF/versions/9/module-info.class': Invalid byte tag in constant pool: 19
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWeaver.addAspectsFromJarFile(BcelWeaver.java:260)
+	at org.aspectj.weaver.bcel.BcelWeaver.addLibraryJarFile(BcelWeaver.java:236)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.initBcelWorld(AjBuildManager.java:874)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:249)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:185)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+	at com.xuexiang.xaop.XAOPPlugin$_apply_closure2$_closure3.doCall(XAOPPlugin.groovy:81)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:428)
+	at org.gradle.api.internal.AbstractTask$ClosureTaskAction.doExecute(AbstractTask.java:698)
+	at org.gradle.api.internal.AbstractTask$ClosureTaskAction.lambda$execute$0(AbstractTask.java:685)
+	at org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.reapply(DefaultUserCodeApplicationContext.java:86)
+	at org.gradle.api.internal.AbstractTask$ClosureTaskAction.execute(AbstractTask.java:685)
+	at org.gradle.api.internal.AbstractTask$ClosureTaskAction.execute(AbstractTask.java:660)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter$2.run(ExecuteActionsTaskExecuter.java:498)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:75)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:153)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:56)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.lambda$run$1(DefaultBuildOperationExecutor.java:71)
+	at org.gradle.internal.operations.UnmanagedBuildOperationWrapper.runWithUnmanagedSupport(UnmanagedBuildOperationWrapper.java:45)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:71)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:483)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:466)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.access$300(ExecuteActionsTaskExecuter.java:105)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter$TaskExecution.executeWithPreviousOutputFiles(ExecuteActionsTaskExecuter.java:270)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter$TaskExecution.execute(ExecuteActionsTaskExecuter.java:248)
+	at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:83)
+	at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:37)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:50)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:47)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:200)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:195)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:75)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:153)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:62)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.lambda$call$2(DefaultBuildOperationExecutor.java:76)
+	at org.gradle.internal.operations.UnmanagedBuildOperationWrapper.callWithUnmanagedSupport(UnmanagedBuildOperationWrapper.java:54)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:76)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:47)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:37)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:68)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:38)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:50)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:36)
+	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:41)
+	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:74)
+	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
+	at org.gradle.internal.execution.steps.CreateOutputsStep.execute(CreateOutputsStep.java:51)
+	at org.gradle.internal.execution.steps.CreateOutputsStep.execute(CreateOutputsStep.java:29)
+	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.execute(CaptureStateAfterExecutionStep.java:54)
+	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.execute(CaptureStateAfterExecutionStep.java:35)
+	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:60)
+	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:27)
+	at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:174)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:74)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:45)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:40)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:29)
+	at org.gradle.internal.execution.steps.RecordOutputsStep.execute(RecordOutputsStep.java:36)
+	at org.gradle.internal.execution.steps.RecordOutputsStep.execute(RecordOutputsStep.java:22)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:99)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$0(SkipUpToDateStep.java:92)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:52)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:36)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:84)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:41)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
+	at org.gradle.internal.execution.steps.ResolveCachingStateStep.execute(ResolveCachingStateStep.java:91)
+	at org.gradle.internal.execution.steps.ResolveCachingStateStep.execute(ResolveCachingStateStep.java:49)
+	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:78)
+	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:49)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:105)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:50)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.lambda$execute$2(SkipEmptyWorkStep.java:86)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:86)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:32)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+	at org.gradle.internal.execution.steps.LoadExecutionStateStep.execute(LoadExecutionStateStep.java:43)
+	at org.gradle.internal.execution.steps.LoadExecutionStateStep.execute(LoadExecutionStateStep.java:31)
+	at org.gradle.internal.execution.steps.AssignWorkspaceStep.lambda$execute$0(AssignWorkspaceStep.java:40)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter$TaskExecution$2.withWorkspace(ExecuteActionsTaskExecuter.java:283)
+	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:40)
+	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:30)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:37)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:27)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:49)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:35)
+	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:76)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:184)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:173)
+	at org.gradle.api.internal.tasks.execution.CleanupStaleOutputsExecuter.execute(CleanupStaleOutputsExecuter.java:109)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:56)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:200)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:195)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:75)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:153)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:62)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.lambda$call$2(DefaultBuildOperationExecutor.java:76)
+	at org.gradle.internal.operations.UnmanagedBuildOperationWrapper.callWithUnmanagedSupport(UnmanagedBuildOperationWrapper.java:54)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:76)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:74)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:408)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:395)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:388)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:374)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.lambda$run$0(DefaultPlanExecutor.java:127)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:191)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.executeNextNode(DefaultPlanExecutor.java:182)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:124)
+	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:72)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:193)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:186)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:39)
+	at org.gradle.execution.DefaultBuildWorkExecutor.execute(DefaultBuildWorkExecutor.java:40)
+	at org.gradle.execution.DefaultBuildWorkExecutor.access$000(DefaultBuildWorkExecutor.java:24)
+	at org.gradle.execution.DefaultBuildWorkExecutor$1.proceed(DefaultBuildWorkExecutor.java:48)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:49)
+	at org.gradle.execution.DefaultBuildWorkExecutor.execute(DefaultBuildWorkExecutor.java:40)
+	at org.gradle.execution.DefaultBuildWorkExecutor.execute(DefaultBuildWorkExecutor.java:33)
+	at org.gradle.execution.IncludedBuildLifecycleBuildWorkExecutor.execute(IncludedBuildLifecycleBuildWorkExecutor.java:36)
+	at org.gradle.execution.UndefinedBuildWorkExecutor.execute(UndefinedBuildWorkExecutor.java:48)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.run(BuildOperationFiringBuildWorkerExecutor.java:57)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:75)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:153)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:56)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.lambda$run$1(DefaultBuildOperationExecutor.java:71)
+	at org.gradle.internal.operations.UnmanagedBuildOperationWrapper.runWithUnmanagedSupport(UnmanagedBuildOperationWrapper.java:45)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:71)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:42)
+	at org.gradle.initialization.DefaultGradleLauncher.runWork(DefaultGradleLauncher.java:260)
+	at org.gradle.initialization.DefaultGradleLauncher.doClassicBuildStages(DefaultGradleLauncher.java:173)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuildStages(DefaultGradleLauncher.java:149)
+	at org.gradle.initialization.DefaultGradleLauncher.executeTasks(DefaultGradleLauncher.java:125)
+	at org.gradle.internal.invocation.GradleBuildController$1.create(GradleBuildController.java:71)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:213)
+	at org.gradle.internal.invocation.GradleBuildController.doBuild(GradleBuildController.java:67)
+	at org.gradle.internal.invocation.GradleBuildController.run(GradleBuildController.java:56)
+	at org.gradle.tooling.internal.provider.runner.BuildModelActionRunner.run(BuildModelActionRunner.java:56)
+	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+	at org.gradle.launcher.exec.BuildOutcomeReportingBuildActionRunner.run(BuildOutcomeReportingBuildActionRunner.java:66)
+	at org.gradle.tooling.internal.provider.ValidatingBuildActionRunner.run(ValidatingBuildActionRunner.java:32)
+	at org.gradle.tooling.internal.provider.FileSystemWatchingBuildActionRunner.run(FileSystemWatchingBuildActionRunner.java:90)
+	at org.gradle.launcher.exec.BuildCompletionNotifyingBuildActionRunner.run(BuildCompletionNotifyingBuildActionRunner.java:41)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionRunner$3.call(RunAsBuildOperationBuildActionRunner.java:49)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionRunner$3.call(RunAsBuildOperationBuildActionRunner.java:44)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:200)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:195)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:75)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:153)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:62)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.lambda$call$2(DefaultBuildOperationExecutor.java:76)
+	at org.gradle.internal.operations.UnmanagedBuildOperationWrapper.callWithUnmanagedSupport(UnmanagedBuildOperationWrapper.java:54)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:76)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionRunner.run(RunAsBuildOperationBuildActionRunner.java:44)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.lambda$execute$0(InProcessBuildActionExecuter.java:59)
+	at org.gradle.composite.internal.DefaultRootBuildState.run(DefaultRootBuildState.java:86)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:58)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:30)
+	at org.gradle.launcher.exec.BuildTreeScopeLifecycleBuildActionExecuter.lambda$execute$0(BuildTreeScopeLifecycleBuildActionExecuter.java:34)
+	at org.gradle.internal.buildtree.BuildTreeState.run(BuildTreeState.java:53)
+	at org.gradle.launcher.exec.BuildTreeScopeLifecycleBuildActionExecuter.execute(BuildTreeScopeLifecycleBuildActionExecuter.java:33)
+	at org.gradle.launcher.exec.BuildTreeScopeLifecycleBuildActionExecuter.execute(BuildTreeScopeLifecycleBuildActionExecuter.java:28)
+	at org.gradle.tooling.internal.provider.ContinuousBuildActionExecuter.execute(ContinuousBuildActionExecuter.java:104)
+	at org.gradle.tooling.internal.provider.ContinuousBuildActionExecuter.execute(ContinuousBuildActionExecuter.java:55)
+	at org.gradle.tooling.internal.provider.SubscribableBuildActionExecuter.execute(SubscribableBuildActionExecuter.java:64)
+	at org.gradle.tooling.internal.provider.SubscribableBuildActionExecuter.execute(SubscribableBuildActionExecuter.java:37)
+	at org.gradle.tooling.internal.provider.SessionScopeLifecycleBuildActionExecuter.lambda$execute$0(SessionScopeLifecycleBuildActionExecuter.java:54)
+	at org.gradle.internal.session.BuildSessionState.run(BuildSessionState.java:67)
+	at org.gradle.tooling.internal.provider.SessionScopeLifecycleBuildActionExecuter.execute(SessionScopeLifecycleBuildActionExecuter.java:50)
+	at org.gradle.tooling.internal.provider.SessionScopeLifecycleBuildActionExecuter.execute(SessionScopeLifecycleBuildActionExecuter.java:36)
+	at org.gradle.tooling.internal.provider.GradleThreadBuildActionExecuter.execute(GradleThreadBuildActionExecuter.java:36)
+	at org.gradle.tooling.internal.provider.GradleThreadBuildActionExecuter.execute(GradleThreadBuildActionExecuter.java:25)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:59)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:31)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:58)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:42)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:47)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:31)
+	at org.gradle.launcher.daemon.server.exec.ExecuteBuild.doBuild(ExecuteBuild.java:65)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.WatchForDisconnection.execute(WatchForDisconnection.java:39)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ResetDeprecationLogger.execute(ResetDeprecationLogger.java:29)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon.execute(RequestStopIfSingleUsedDaemon.java:35)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:78)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:75)
+	at org.gradle.util.Swapper.swap(Swapper.java:38)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.execute(ForwardClientInput.java:75)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogAndCheckHealth.execute(LogAndCheckHealth.java:55)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogToClient.doBuild(LogToClient.java:63)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment.doBuild(EstablishBuildEnvironment.java:84)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy$1.run(StartBuildOrRespondWithBusy.java:52)
+	at org.gradle.launcher.daemon.server.DaemonStateCoordinator$1.run(DaemonStateCoordinator.java:297)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+---- System Properties ---
+awt.toolkit=sun.awt.windows.WToolkit
+java.specification.version=11
+kotlinx.coroutines.debug=off
+sun.cpu.isalist=amd64
+sun.jnu.encoding=GBK
+sun.arch.data.model=64
+idea.fatal.error.notification=disabled
+pty4j.preferred.native.folder=D:\androidstudio\lib\pty4j-native
+java.vendor.url=https://openjdk.java.net/
+sun.boot.library.path=D:\androidstudio\jre\bin
+jna.tmpdir=C:\Users\Administrator\AppData\Local\Google\AndroidStudio2021.2/tmp
+sun.java.command=org.gradle.launcher.daemon.bootstrap.GradleDaemon 7.0.2
+jdk.debug=release
+ide.native.launcher=true
+java.specification.vendor=Oracle Corporation
+java.version.date=2021-07-20
+java.home=D:\androidstudio\jre
+file.separator=\
+java.vm.compressedOopsMode=32-bit
+line.separator=
+
+java.specification.name=Java Platform API Specification
+java.vm.specification.vendor=Oracle Corporation
+jdk.attach.allowAttachSelf=true
+pty4j.tmpdir=C:\Users\Administrator\AppData\Local\Google\AndroidStudio2021.2/tmp
+user.script=
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+java.runtime.version=11.0.12+7-b1504.28-7817840
+user.name=Administrator
+javax.swing.rebaseCssSizeMap=true
+idea.paths.selector=AndroidStudio2021.2
+file.encoding=GBK
+jnidispatch.path=C:\Users\Administrator\AppData\Local\Google\AndroidStudio2021.2\tmp\jna17886496189221537086.dll
+idea.popup.weight=heavy
+jna.loaded=true
+java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+idea.version=2021.2
+java.version=11.0.12
+idea.xdebug.key=-Xdebug
+java.vm.specification.name=Java Virtual Machine Specification
+idea.jre.check=true
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+sun.os.patch.level=
+action.aware.typeAhead=false
+java.library.path=D:\androidstudio\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Users\Administrator\AppData\Local\Android\Sdk\platform-tools;C:\Users\Administrator\AppData\Local\Android\Sdk\platform-tools;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\.dotnet\tools;.
+java.vendor=Oracle Corporation
+io.netty.processId=54036
+sun.io.unicode.encoding=UnicodeLittle
+java.rmi.server.disableHttp=true
+library.jansi.path=C:\Users\Administrator\.gradle\native\jansi\1.18\windows64
+io.netty.machineId=28:f0:76:ff:fe:16:65:0e
+idea.platform.prefix=AndroidStudio
+sun.desktop=windows
+idea.active=true
+studio.record.file=C:\Users\Administrator\AppData\Local\Google\AndroidStudio2021.2\tmp\AndroidStudio.874ce9bd-aa58-469f-926f-c1865bd05762
+java.class.path=C:\Users\Administrator\.gradle\wrapper\dists\gradle-7.0.2-all\7era6s5ay7zsbhuvl0oc9g94s\gradle-7.0.2\lib\gradle-launcher-7.0.2.jar
+java.vm.vendor=JetBrains s.r.o
+idea.vendor.name=Google
+user.variant=
+winp.folder.preferred=C:\Users\Administrator\AppData\Local\Google\AndroidStudio2021.2/tmp
+user.timezone=Asia/Shanghai
+jb.vmOptionsFile=D:\androidstudio\bin\studio64.exe.vmoptions
+idea.no.launcher=false
+swing.bufferPerWindow=false
+os.name=Windows 10
+java.vm.specification.version=11
+jna.boot.library.path=
+user.country=CN
+sun.java.launcher=SUN_STANDARD
+sun.cpu.endian=little
+user.home=C:\Users\Administrator
+user.language=zh
+jdk.http.auth.tunneling.disabledSchemes=""
+idea.cycle.buffer.size=1024
+io.netty.allocator.numHeapArenas=1
+log4j.defaultInitOverride=true
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.awt.headless=true
+io.netty.allocator.numDirectArenas=1
+idea.max.intellisense.filesize=2500
+io.netty.allocator.useCacheForAllThreads=false
+path.separator=;
+com.jetbrains.suppressWindowRaise=false
+os.version=10.0
+jna.nosys=true
+java.runtime.name=OpenJDK Runtime Environment
+io.netty.allocator.cacheTrimIntervalMillis=600000
+jdk.module.illegalAccess.silent=true
+java.vm.name=OpenJDK 64-Bit Server VM
+kotlin.environment.keepalive=true
+java.vendor.url.bug=https://bugreport.java.com/bugreport/
+java.util.concurrent.ForkJoinPool.common.threadFactory=com.intellij.concurrency.IdeaForkJoinWorkerThreadFactory
+user.dir=E:\gitandroid\android-novel-two
+os.arch=amd64
+io.netty.serviceThreadPrefix=Netty 
+idea.dynamic.classpath=false
+kotlin.daemon.jvm.options=--illegal-access=permit
+java.vm.info=mixed mode
+disableJbScreenMenuBar=true
+java.vm.version=11.0.12+7-b1504.28-7817840
+java.rmi.server.hostname=127.0.0.1
+idea.max.content.load.filesize=20000
+java.class.version=55.0
+splash=true
+---- Command Line ---
+-showWeaveInfo
+-1.8
+-inpath
+E:\gitandroid\android-novel-two\app\build\intermediates\javac\debug\classes
+-aspectpath
+C:\Users\Administrator\AppData\Local\Android\Sdk\platforms\android-31\android.jar;C:\Users\Administrator\AppData\Local\Android\Sdk\build-tools\30.0.2\core-lambda-stubs.jar;E:\gitandroid\android-novel-two\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\R.jar;C:\Users\Administrator\.gradle\caches\transforms-3\22d17f6c27e75d22fc1fedcd42e1de21\transformed\jetified-juniversalchardet-1.0.3.jar;C:\Users\Administrator\.gradle\caches\transforms-3\c194e4e96cfe6423ba48fd6767ebd1ed\transformed\jetified-Msc.jar;C:\Users\Administrator\.gradle\caches\transforms-3\f226ba5bac893132ada052bb3675ef73\transformed\jetified-tenjin.jar;C:\Users\Administrator\.gradle\caches\transforms-3\8dd86e248ef742a47c8e9f4b10e6ddb1\transformed\jetified-kotlin-stdlib-jdk8-1.6.10.jar;C:\Users\Administrator\.gradle\caches\transforms-3\79f0c33126394518709e4ea44839c222\transformed\jetified-okgo-3.0.4-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\4b9ebc96b2bf93a27c7f18cb33b6992c\transformed\jetified-ucrop-2.2.2-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\21fa12e8ef76f63866cc6c4b22e58c42\transformed\jetified-qiniu-android-sdk-8.0.5.jar;C:\Users\Administrator\.gradle\caches\transforms-3\beefe2621c2f72196598072622e19018\transformed\jetified-retrofit-2.9.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\107d337a410404f61dab207879acdeaf\transformed\jetified-okhttp-4.2.2.jar;C:\Users\Administrator\.gradle\caches\transforms-3\a677a111746d3cd525bf8d094ec30fdc\transformed\jetified-kotlin-android-extensions-runtime-1.6.10.jar;C:\Users\Administrator\.gradle\caches\transforms-3\f3c6d81a61b85390fafebe2171421035\transformed\jetified-billing-ktx-4.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\3290ea6b1895c6aac1e7d7ef0e523f09\transformed\jetified-core-ktx-1.3.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\1e25ef2c38fe47e71c201f2e09d90ef8\transformed\jetified-facebook-android-sdk-8.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\8d523af8f374f13c57f9b5b70ae285d7\transformed\jetified-BaseRecyclerViewAdapterHelper-3.0.4-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\f660dcca3c43d42ed401d18164021f16\transformed\jetified-kotlin-stdlib-jdk7-1.6.10.jar;C:\Users\Administrator\.gradle\caches\transforms-3\25cf0fdc9742a936a06ac1b5664b07ab\transformed\jetified-kotlinx-coroutines-core-jvm-1.3.9.jar;C:\Users\Administrator\.gradle\caches\transforms-3\5e4f023fd2a9047e0bc2fec81489d08d\transformed\jetified-kotlin-stdlib-1.6.10.jar;C:\Users\Administrator\.gradle\caches\transforms-3\967d3fb69dc84536aee8a801a1d30b36\transformed\jetified-annotations-13.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\72b78cfbf3359f7a61cd7178a57089e6\transformed\jetified-kotlin-stdlib-common-1.6.10.jar;C:\Users\Administrator\.gradle\caches\transforms-3\e3fe17db6f3b0f27af4f4b59b815adbd\transformed\jetified-aspectjrt-1.8.9.jar;C:\Users\Administrator\.gradle\caches\transforms-3\b527341722fb2dd9daa93ee31c99ff37\transformed\material-1.2.0-alpha04-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\8c1428af0c8b94eefb9eced34d361d42\transformed\constraintlayout-2.0.2-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\4faf31ffcae9443bb02545591a216041\transformed\jetified-customactivityoncrash-2.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\3d3f6e512a4a49575d9d24556de36a4f\transformed\jetified-lottie-3.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\d9b737e20222f1c755e6c9a285084210\transformed\jetified-MagicIndicator-1.5.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\0c82724879f74b70d40db26931c192d4\transformed\jetified-facebook-login-8.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\81be8fe6832f08289563fd46077b5187\transformed\jetified-facebook-gamingservices-8.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\c4362a771d0e38b8cdd0a271d4f625e6\transformed\jetified-facebook-share-8.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\bbc1f4e803158f6d00be0733be79485e\transformed\jetified-facebook-common-8.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\ed85650c3ee1888bb017838759a1cb99\transformed\appcompat-1.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\6bb757da94264b613315a9481fe70e81\transformed\jetified-viewpager2-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\7162c74143d40e581fb10c4cbbd5ba36\transformed\recyclerview-1.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\01661de54d65edc30373b2375db8a5f0\transformed\lifecycle-extensions-2.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\bd0906c3291592d4d156a36c9071e069\transformed\jetified-play-services-ads-19.6.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\33d76dc0ca7e0680f310f1f1bddb6db4\transformed\jetified-pagerslidingtabstrip-1.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\72ee60dd308e17c93969ded78a2bc14c\transformed\jetified-arouter-api-1.4.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\528bd4bd66dc3891f08050f7d9bd15f2\transformed\legacy-support-v4-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\1c20d546f76f77a54a323761bb24e5ad\transformed\jetified-firebase-messaging-22.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\a89aaf9d60c532838ec02ecacda266af\transformed\jetified-glide-4.11.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\a98867e6fb8c871d2de0613f17b2b2dc\transformed\jetified-firebase-auth-21.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\2b48fd107a1b4c0544fc4cf671b5c61d\transformed\jetified-play-services-auth-19.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\ebd3c6edbe70370ee2b267f4e1cd16f0\transformed\jetified-play-services-gass-19.6.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\38fe4f01a97a2cd76ae664934b0731ed\transformed\jetified-firebase-analytics-19.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\dc8d2bc5af19f6b12c69293db81046c2\transformed\jetified-play-services-measurement-19.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\39db234fcf7ee92bfb067f9585481608\transformed\jetified-play-services-measurement-api-19.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\aacf51bbae9b85bf65bbf7fc793afd2f\transformed\jetified-play-services-measurement-sdk-19.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\6667ba9cf0f774288a48e042c8772874\transformed\jetified-play-services-measurement-impl-19.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\cc3c5d11613f8952730ab5684e5a9ff0\transformed\jetified-play-services-ads-identifier-18.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\03e57f83e9d4d01cabcba1c1d46a4f87\transformed\jetified-play-services-ads-lite-19.6.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\9bf2c3c65b4e9dfae69e2395fdcac3c2\transformed\jetified-firebase-installations-17.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\67e8596a2d88aacb601ce104db63efe0\transformed\jetified-firebase-datatransport-18.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\e75d110306ba82b02b95639d4daf71d3\transformed\jetified-firebase-auth-interop-20.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\746b4ac351847404fcfc4383c0d16ed8\transformed\jetified-firebase-common-20.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\e09d54ee8bc4e60b240a94808c89b980\transformed\jetified-play-services-cloud-messaging-16.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\35a3566d15163a8c8756a7b870ed6334\transformed\jetified-play-services-stats-17.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\6028b48ab15219a8fb1368f308e5a5b4\transformed\jetified-firebase-iid-interop-17.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\170cea77f72f89f6df6758b5e35214d8\transformed\jetified-firebase-installations-interop-17.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\398d5d1846e11f0e66b1e284ff7a430e\transformed\jetified-play-services-auth-api-phone-17.4.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\07412621f8738eab063818e4d2342b4f\transformed\jetified-play-services-safetynet-17.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\e00194c3f2d4002646fb90f27b7fe137\transformed\jetified-play-services-auth-base-17.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\1d85701eb5fec3095e367555521b6652\transformed\jetified-play-services-base-17.5.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\485116cb114649850b0ff71949ab3ede\transformed\jetified-play-services-tasks-17.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\0dfb44c0d733020566aa5880357133da\transformed\jetified-firebase-measurement-connector-19.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\f858f4cacd32f0077236bc931b1bd64f\transformed\jetified-play-services-measurement-sdk-api-19.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\a3c38c78f107705b561778df8472dd95\transformed\jetified-play-services-measurement-base-19.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\6f327b84ae14a6c4e96d5a8af4bb5186\transformed\jetified-play-services-basement-18.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\d7d65a00bf4379b8480652fc59e20607\transformed\fragment-1.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\1cbe4edee23d791e06eb626c67877525\transformed\jetified-appcompat-resources-1.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\83a39dc3261485d30cfa533e78b1085e\transformed\browser-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\6d572ef75a6f9716a0a53db44e3d0a29\transformed\legacy-support-core-ui-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\4945312c917532475f53502754a4ca73\transformed\drawerlayout-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\ab3b4bc7d4ab0100a59b755773aed80b\transformed\coordinatorlayout-1.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\aaec62109f56b95debcd0022a6c2e65b\transformed\transition-1.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\3e4ae736a840d38e5ced5771aaacb1c6\transformed\vectordrawable-animated-1.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\32f93d384bcbe7bc31e7db46662a0b81\transformed\vectordrawable-1.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\efdfc92a2bcb50e5b79debb38e72c4d6\transformed\jetified-butterknife-reflect-10.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\e0f56b762651945cfe0fee31e43bee11\transformed\jetified-butterknife-runtime-10.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\a60fe4bbacb33f9bd70bb56b320c0653\transformed\viewpager-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\716748a5c433442e53736282ca19dd2c\transformed\media-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\34a1e4d70316f28dd7afb56e8e2cd0fa\transformed\jetified-facebook-applinks-8.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\031102c08a141c306ed7d37255f2c58c\transformed\jetified-facebook-messenger-8.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\4ecf959ee75451597d1caa69a19231d2\transformed\jetified-facebook-core-8.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\e80199eb7a472457ff9bc4368c8b6df1\transformed\legacy-support-core-utils-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\415f6b449b9d2822666a44c8dbb6ed9f\transformed\slidingpanelayout-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\6e71db75d954503396f1bee12654c7a3\transformed\customview-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\42d3dc1f0ec315f7b2df04167526bbb1\transformed\loader-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\499d7398fb48d8dfae9438a9a4547909\transformed\jetified-activity-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\d3de9d345c5418e130b323acf7f11d74\transformed\swiperefreshlayout-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\04c3cdf8c77d2dc2bf34f49fc241dc35\transformed\asynclayoutinflater-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\05ceed3d0ecdd16b8f8acc9e11fe0cca\transformed\core-1.6.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\53381eaeecf0e5bba87c1b424026d771\transformed\jetified-lifecycle-process-2.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\084e56e6dd8cfd55d953ff4592f21538\transformed\jetified-lifecycle-service-2.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\b31aa85167abe284afc77fb2e47adb57\transformed\lifecycle-runtime-2.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\358440d43c8e4047585f8455b6accbf6\transformed\cursoradapter-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\88eb0d24cb4f5f9f1c4190af819c9807\transformed\cardview-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\bbef9c3cb5f297dbc757d432f23e1f37\transformed\versionedparcelable-1.1.1-api.jar;C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\androidx.collection\collection\1.1.0\1f27220b47669781457de0d600849a5de0e89909\collection-1.1.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\cbe9b5c99a505d84f41e8fa0e0bbab1b\transformed\jetified-gifdecoder-4.11.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\528daf2edcaf992d09133270c44361ba\transformed\exifinterface-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\c69d9af75fad5dd12db7500468ff12a2\transformed\jetified-transport-backend-cct-3.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\0f35c4e825f09a33a1e965f61d094022\transformed\jetified-transport-runtime-3.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\59a14dd75cf640b52d40fc367935f8fc\transformed\jetified-transport-api-3.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\ee5658253611bdee2e7c0c95a876c32d\transformed\jetified-firebase-components-17.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\5f56de3e5e8d38a3f2006d3e33a0311b\transformed\localbroadcastmanager-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\813dd1eb11af1e28287f489518efcd98\transformed\work-runtime-2.7.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\89d7b198a5e70b362d13bfeb8287dec4\transformed\lifecycle-livedata-2.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\1a834124fcc9b944157ea8e1d8c5edbc\transformed\lifecycle-livedata-core-2.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\74d7e9dedacc5c251e20bf7a26c3c7d5\transformed\core-runtime-2.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\93c8587fe435bcbc813487751747b32e\transformed\jetified-savedstate-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\androidx.arch.core\core-common\2.1.0\b3152fc64428c9354344bd89848ecddc09b6f07e\core-common-2.1.0.jar;C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\androidx.lifecycle\lifecycle-common\2.1.0\c67e7807d9cd6c329b9d0218b2ec4e505dd340b7\lifecycle-common-2.1.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\478d526506eb8905d8b93fb24e1b2b58\transformed\lifecycle-viewmodel-2.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\ef3b683b18e95c12e53a350274c2585a\transformed\interpolator-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\bea8dcd42bf78809c37af15f50ec0146\transformed\jetified-butterknife-annotations-10.2.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\44052b105be60619a9877e1955e79e9e\transformed\documentfile-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\7b85665373743e7bdb351682ea4786eb\transformed\print-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\fcaefadbf73e44054a762d73d403651e\transformed\jetified-firebase-encoders-json-18.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\c27e09c892a60bbe341c56274a69766d\transformed\jetified-firebase-encoders-17.0.0.jar;C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\androidx.annotation\annotation\1.2.0\57136ff68ee784c6e19db34ed4a175338fadfde1\annotation-1.2.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\5a3285bdb71a1da484e94f6e0b33d5ac\transformed\jetified-annotation-experimental-1.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\0713f97d8ea97cf263a3eb2e777cee35\transformed\jetified-billing-4.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\9372bcfe69eeb27f1ffc6fef2fcde517\transformed\jetified-adjust-android-4.28.9.jar;C:\Users\Administrator\.gradle\caches\transforms-3\d7882366f9313e2af10d7d18d1bfa52f\transformed\jetified-installreferrer-2.2-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\4602a8d5b3648407fb0c5c414fe2d612\transformed\jetified-adjust-android-webbridge-4.28.9.jar;C:\Users\Administrator\.gradle\caches\transforms-3\0065184d0463251970ee3a2f397329a0\transformed\jetified-http-5.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\d4269bac36e16be5c1bb66dc6c6851b9\transformed\jetified-xxpermissions-6.2-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\1ccf5cccabc17fc5a4fb8bb8d2ee6148\transformed\jetified-titlebar-6.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\e797f1313b8ff73ccf8fbd93bfeaecca\transformed\jetified-toast-8.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\79c4c0b174fe2d78f24e413686d54bfc\transformed\jetified-okio-2.2.2.jar;C:\Users\Administrator\.gradle\caches\transforms-3\e8618fc8be5eefd8d3a831332fba4a55\transformed\jetified-gson-2.8.6.jar;C:\Users\Administrator\.gradle\caches\transforms-3\a8070b3b0553239d15ce2e8a898a9eeb\transformed\jetified-play-services-ads-base-19.6.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\a39056c8bb8ff09763268fe81c578f28\transformed\jetified-listenablefuture-1.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\14097ee918f00a6279f84d1384fa87eb\transformed\jetified-startup-runtime-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\da3270be62c176ea46b6a4075d423563\transformed\jetified-disklrucache-4.11.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\a5e8285dd1fee90ddbea665bb557c5d7\transformed\jetified-annotations-4.11.0.jar;C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\androidx.constraintlayout\constraintlayout-solver\2.0.2\18fb204d40a3bb60d9e797f25912adad32b5e2ad\constraintlayout-solver-2.0.2.jar;C:\Users\Administrator\.gradle\caches\transforms-3\454031a23c6eb0cc232b0965e44e9088\transformed\jetified-glide-transformations-4.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\744c9f9d38618ced584142152fd07437\transformed\jetified-immersionbar-3.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\1e76c931fbb7eb2c6739ecf6a79fc32e\transformed\jetified-PhotoView-2.3.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\672d7220d26ccda6a4d513e56bcbeac2\transformed\jetified-pageindicatorview-1.0.3-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\fa019cfbac0aee931773be1a68398165\transformed\jetified-SmartRefreshLayout-1.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\be34aa482be50903d0a2bfedc9cf8ac3\transformed\jetified-SmartRefreshHeader-1.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\11c75e19bff27aa5d72c28ef269e493a\transformed\jetified-smart-swipe-1.1.2-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\d05a78832ae919aad0f9fecfcb9599a8\transformed\jetified-smart-swipe-x-1.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\da0c40ee74bb7e55acff4930c04f2d91\transformed\jetified-eventbus-3.0.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\3b95910117be4a863c1157e241da1417\transformed\jetified-recyclerview-swipe-1.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\35ea903826843c3a912388e85f890236\transformed\jetified-flexbox-2.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\9dfe099190bc120ae458eb6392ee108a\transformed\jetified-roundedimageview-2.3.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\af7936873c2654aa766fa8fa1c1c2a9a\transformed\jetified-banner-1.4.9-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\c4b61c5dbbe5bd8291c9be36f00d1c6c\transformed\jetified-FlycoTabLayout_Lib-2.1.2-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\77cb2f31e9a642255a81572df9e93773\transformed\jetified-greendao-3.3.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\b6073095961fde68619de1f4c0122327\transformed\jetified-greendao-api-3.3.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\7788c5cd54f6ee7da451a7cf67863a2c\transformed\multidex-2.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\bf91f2496ad906b869d31638db5ab24f\transformed\jetified-core-1.3.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\01de3a35b26abd327eecc0d6727b8c9a\transformed\jetified-okhttputils-2.6.2-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\74e8cc532b80229ffda5fe32464c9413\transformed\jetified-fastjson-1.1.70.android.jar;C:\Users\Administrator\.gradle\caches\transforms-3\083373aa0bdca43009602eaca51a5da1\transformed\jetified-happy-dns-0.2.16.jar;C:\Users\Administrator\.gradle\caches\transforms-3\c8a0c564c1d0b4f30aa9a4adb56e6376\transformed\jetified-conscrypt-android-2.2.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\bec1de9f03f504aea95cfb19c61569a4\transformed\jetified-Luban-1.1.8-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\fc392f943d78593617ef8885aa0e57c3\transformed\jetified-XTabLayout-1.1.5-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\9ccd1a53b901907fbb89386b6971a9e5\transformed\jetified-arouter-annotation-1.0.6.jar;C:\Users\Administrator\.gradle\caches\transforms-3\cff318c00f00412d0212e1a1ddfff9ae\transformed\jetified-rxandroid-2.1.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\a0301972b56a1e7612d2d05fdf62c58c\transformed\jetified-rxjava-2.2.19.jar;C:\Users\Administrator\.gradle\caches\transforms-3\f1cb3b90ca0bea6507dba8fc33625fb5\transformed\jetified-reactive-streams-1.0.3.jar;C:\Users\Administrator\.gradle\caches\transforms-3\719f87226f48977fa3ea9ecef9cbaab3\transformed\jetified-bolts-android-1.4.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\aff5d6bc6dc7f5fcb6b2a7ca039922e0\transformed\jetified-bolts-applinks-1.4.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\d146c447105f76b7cc3dc965da7148f3\transformed\jetified-bolts-tasks-1.4.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\183bfb4a161bf864c3872321bfc04152\transformed\jetified-core-3.3.3.jar;C:\Users\Administrator\.gradle\caches\transforms-3\93242d58d0a34fe1561a0864fef0904f\transformed\jetified-firebase-annotations-16.0.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\46086a8649f475975d1240b9efda5e4a\transformed\jetified-javax.inject-1.jar;C:\Users\Administrator\.gradle\caches\transforms-3\743314420d4b618b726ae97e441b3b0d\transformed\jetified-mmkv-static-1.2.2-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\05cc898ab64935faba5e1fb83bba46b9\transformed\jetified-badgeview-1.1.2-api.jar;E:\gitandroid\android-novel-two\base\build\intermediates\compile_library_classes_jar\debug\classes.jar;E:\gitandroid\android-novel-two\widget\build\intermediates\compile_library_classes_jar\debug\classes.jar;E:\gitandroid\android-novel-two\app\build\tmp\kotlin-classes\debug
+-d
+E:\gitandroid\android-novel-two\app\build\intermediates\javac\debug\classes
+-classpath
+C:\Users\Administrator\AppData\Local\Android\Sdk\platforms\android-31\android.jar;C:\Users\Administrator\AppData\Local\Android\Sdk\build-tools\30.0.2\core-lambda-stubs.jar;E:\gitandroid\android-novel-two\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\R.jar;C:\Users\Administrator\.gradle\caches\transforms-3\22d17f6c27e75d22fc1fedcd42e1de21\transformed\jetified-juniversalchardet-1.0.3.jar;C:\Users\Administrator\.gradle\caches\transforms-3\c194e4e96cfe6423ba48fd6767ebd1ed\transformed\jetified-Msc.jar;C:\Users\Administrator\.gradle\caches\transforms-3\f226ba5bac893132ada052bb3675ef73\transformed\jetified-tenjin.jar;C:\Users\Administrator\.gradle\caches\transforms-3\8dd86e248ef742a47c8e9f4b10e6ddb1\transformed\jetified-kotlin-stdlib-jdk8-1.6.10.jar;C:\Users\Administrator\.gradle\caches\transforms-3\79f0c33126394518709e4ea44839c222\transformed\jetified-okgo-3.0.4-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\4b9ebc96b2bf93a27c7f18cb33b6992c\transformed\jetified-ucrop-2.2.2-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\21fa12e8ef76f63866cc6c4b22e58c42\transformed\jetified-qiniu-android-sdk-8.0.5.jar;C:\Users\Administrator\.gradle\caches\transforms-3\beefe2621c2f72196598072622e19018\transformed\jetified-retrofit-2.9.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\107d337a410404f61dab207879acdeaf\transformed\jetified-okhttp-4.2.2.jar;C:\Users\Administrator\.gradle\caches\transforms-3\a677a111746d3cd525bf8d094ec30fdc\transformed\jetified-kotlin-android-extensions-runtime-1.6.10.jar;C:\Users\Administrator\.gradle\caches\transforms-3\f3c6d81a61b85390fafebe2171421035\transformed\jetified-billing-ktx-4.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\3290ea6b1895c6aac1e7d7ef0e523f09\transformed\jetified-core-ktx-1.3.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\1e25ef2c38fe47e71c201f2e09d90ef8\transformed\jetified-facebook-android-sdk-8.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\8d523af8f374f13c57f9b5b70ae285d7\transformed\jetified-BaseRecyclerViewAdapterHelper-3.0.4-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\f660dcca3c43d42ed401d18164021f16\transformed\jetified-kotlin-stdlib-jdk7-1.6.10.jar;C:\Users\Administrator\.gradle\caches\transforms-3\25cf0fdc9742a936a06ac1b5664b07ab\transformed\jetified-kotlinx-coroutines-core-jvm-1.3.9.jar;C:\Users\Administrator\.gradle\caches\transforms-3\5e4f023fd2a9047e0bc2fec81489d08d\transformed\jetified-kotlin-stdlib-1.6.10.jar;C:\Users\Administrator\.gradle\caches\transforms-3\967d3fb69dc84536aee8a801a1d30b36\transformed\jetified-annotations-13.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\72b78cfbf3359f7a61cd7178a57089e6\transformed\jetified-kotlin-stdlib-common-1.6.10.jar;C:\Users\Administrator\.gradle\caches\transforms-3\e3fe17db6f3b0f27af4f4b59b815adbd\transformed\jetified-aspectjrt-1.8.9.jar;C:\Users\Administrator\.gradle\caches\transforms-3\b527341722fb2dd9daa93ee31c99ff37\transformed\material-1.2.0-alpha04-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\8c1428af0c8b94eefb9eced34d361d42\transformed\constraintlayout-2.0.2-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\4faf31ffcae9443bb02545591a216041\transformed\jetified-customactivityoncrash-2.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\3d3f6e512a4a49575d9d24556de36a4f\transformed\jetified-lottie-3.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\d9b737e20222f1c755e6c9a285084210\transformed\jetified-MagicIndicator-1.5.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\0c82724879f74b70d40db26931c192d4\transformed\jetified-facebook-login-8.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\81be8fe6832f08289563fd46077b5187\transformed\jetified-facebook-gamingservices-8.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\c4362a771d0e38b8cdd0a271d4f625e6\transformed\jetified-facebook-share-8.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\bbc1f4e803158f6d00be0733be79485e\transformed\jetified-facebook-common-8.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\ed85650c3ee1888bb017838759a1cb99\transformed\appcompat-1.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\6bb757da94264b613315a9481fe70e81\transformed\jetified-viewpager2-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\7162c74143d40e581fb10c4cbbd5ba36\transformed\recyclerview-1.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\01661de54d65edc30373b2375db8a5f0\transformed\lifecycle-extensions-2.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\bd0906c3291592d4d156a36c9071e069\transformed\jetified-play-services-ads-19.6.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\33d76dc0ca7e0680f310f1f1bddb6db4\transformed\jetified-pagerslidingtabstrip-1.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\72ee60dd308e17c93969ded78a2bc14c\transformed\jetified-arouter-api-1.4.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\528bd4bd66dc3891f08050f7d9bd15f2\transformed\legacy-support-v4-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\1c20d546f76f77a54a323761bb24e5ad\transformed\jetified-firebase-messaging-22.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\a89aaf9d60c532838ec02ecacda266af\transformed\jetified-glide-4.11.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\a98867e6fb8c871d2de0613f17b2b2dc\transformed\jetified-firebase-auth-21.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\2b48fd107a1b4c0544fc4cf671b5c61d\transformed\jetified-play-services-auth-19.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\ebd3c6edbe70370ee2b267f4e1cd16f0\transformed\jetified-play-services-gass-19.6.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\38fe4f01a97a2cd76ae664934b0731ed\transformed\jetified-firebase-analytics-19.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\dc8d2bc5af19f6b12c69293db81046c2\transformed\jetified-play-services-measurement-19.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\39db234fcf7ee92bfb067f9585481608\transformed\jetified-play-services-measurement-api-19.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\aacf51bbae9b85bf65bbf7fc793afd2f\transformed\jetified-play-services-measurement-sdk-19.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\6667ba9cf0f774288a48e042c8772874\transformed\jetified-play-services-measurement-impl-19.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\cc3c5d11613f8952730ab5684e5a9ff0\transformed\jetified-play-services-ads-identifier-18.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\03e57f83e9d4d01cabcba1c1d46a4f87\transformed\jetified-play-services-ads-lite-19.6.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\9bf2c3c65b4e9dfae69e2395fdcac3c2\transformed\jetified-firebase-installations-17.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\67e8596a2d88aacb601ce104db63efe0\transformed\jetified-firebase-datatransport-18.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\e75d110306ba82b02b95639d4daf71d3\transformed\jetified-firebase-auth-interop-20.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\746b4ac351847404fcfc4383c0d16ed8\transformed\jetified-firebase-common-20.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\e09d54ee8bc4e60b240a94808c89b980\transformed\jetified-play-services-cloud-messaging-16.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\35a3566d15163a8c8756a7b870ed6334\transformed\jetified-play-services-stats-17.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\6028b48ab15219a8fb1368f308e5a5b4\transformed\jetified-firebase-iid-interop-17.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\170cea77f72f89f6df6758b5e35214d8\transformed\jetified-firebase-installations-interop-17.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\398d5d1846e11f0e66b1e284ff7a430e\transformed\jetified-play-services-auth-api-phone-17.4.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\07412621f8738eab063818e4d2342b4f\transformed\jetified-play-services-safetynet-17.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\e00194c3f2d4002646fb90f27b7fe137\transformed\jetified-play-services-auth-base-17.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\1d85701eb5fec3095e367555521b6652\transformed\jetified-play-services-base-17.5.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\485116cb114649850b0ff71949ab3ede\transformed\jetified-play-services-tasks-17.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\0dfb44c0d733020566aa5880357133da\transformed\jetified-firebase-measurement-connector-19.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\f858f4cacd32f0077236bc931b1bd64f\transformed\jetified-play-services-measurement-sdk-api-19.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\a3c38c78f107705b561778df8472dd95\transformed\jetified-play-services-measurement-base-19.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\6f327b84ae14a6c4e96d5a8af4bb5186\transformed\jetified-play-services-basement-18.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\d7d65a00bf4379b8480652fc59e20607\transformed\fragment-1.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\1cbe4edee23d791e06eb626c67877525\transformed\jetified-appcompat-resources-1.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\83a39dc3261485d30cfa533e78b1085e\transformed\browser-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\6d572ef75a6f9716a0a53db44e3d0a29\transformed\legacy-support-core-ui-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\4945312c917532475f53502754a4ca73\transformed\drawerlayout-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\ab3b4bc7d4ab0100a59b755773aed80b\transformed\coordinatorlayout-1.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\aaec62109f56b95debcd0022a6c2e65b\transformed\transition-1.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\3e4ae736a840d38e5ced5771aaacb1c6\transformed\vectordrawable-animated-1.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\32f93d384bcbe7bc31e7db46662a0b81\transformed\vectordrawable-1.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\efdfc92a2bcb50e5b79debb38e72c4d6\transformed\jetified-butterknife-reflect-10.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\e0f56b762651945cfe0fee31e43bee11\transformed\jetified-butterknife-runtime-10.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\a60fe4bbacb33f9bd70bb56b320c0653\transformed\viewpager-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\716748a5c433442e53736282ca19dd2c\transformed\media-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\34a1e4d70316f28dd7afb56e8e2cd0fa\transformed\jetified-facebook-applinks-8.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\031102c08a141c306ed7d37255f2c58c\transformed\jetified-facebook-messenger-8.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\4ecf959ee75451597d1caa69a19231d2\transformed\jetified-facebook-core-8.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\e80199eb7a472457ff9bc4368c8b6df1\transformed\legacy-support-core-utils-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\415f6b449b9d2822666a44c8dbb6ed9f\transformed\slidingpanelayout-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\6e71db75d954503396f1bee12654c7a3\transformed\customview-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\42d3dc1f0ec315f7b2df04167526bbb1\transformed\loader-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\499d7398fb48d8dfae9438a9a4547909\transformed\jetified-activity-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\d3de9d345c5418e130b323acf7f11d74\transformed\swiperefreshlayout-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\04c3cdf8c77d2dc2bf34f49fc241dc35\transformed\asynclayoutinflater-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\05ceed3d0ecdd16b8f8acc9e11fe0cca\transformed\core-1.6.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\53381eaeecf0e5bba87c1b424026d771\transformed\jetified-lifecycle-process-2.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\084e56e6dd8cfd55d953ff4592f21538\transformed\jetified-lifecycle-service-2.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\b31aa85167abe284afc77fb2e47adb57\transformed\lifecycle-runtime-2.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\358440d43c8e4047585f8455b6accbf6\transformed\cursoradapter-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\88eb0d24cb4f5f9f1c4190af819c9807\transformed\cardview-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\bbef9c3cb5f297dbc757d432f23e1f37\transformed\versionedparcelable-1.1.1-api.jar;C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\androidx.collection\collection\1.1.0\1f27220b47669781457de0d600849a5de0e89909\collection-1.1.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\cbe9b5c99a505d84f41e8fa0e0bbab1b\transformed\jetified-gifdecoder-4.11.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\528daf2edcaf992d09133270c44361ba\transformed\exifinterface-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\c69d9af75fad5dd12db7500468ff12a2\transformed\jetified-transport-backend-cct-3.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\0f35c4e825f09a33a1e965f61d094022\transformed\jetified-transport-runtime-3.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\59a14dd75cf640b52d40fc367935f8fc\transformed\jetified-transport-api-3.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\ee5658253611bdee2e7c0c95a876c32d\transformed\jetified-firebase-components-17.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\5f56de3e5e8d38a3f2006d3e33a0311b\transformed\localbroadcastmanager-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\813dd1eb11af1e28287f489518efcd98\transformed\work-runtime-2.7.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\89d7b198a5e70b362d13bfeb8287dec4\transformed\lifecycle-livedata-2.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\1a834124fcc9b944157ea8e1d8c5edbc\transformed\lifecycle-livedata-core-2.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\74d7e9dedacc5c251e20bf7a26c3c7d5\transformed\core-runtime-2.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\93c8587fe435bcbc813487751747b32e\transformed\jetified-savedstate-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\androidx.arch.core\core-common\2.1.0\b3152fc64428c9354344bd89848ecddc09b6f07e\core-common-2.1.0.jar;C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\androidx.lifecycle\lifecycle-common\2.1.0\c67e7807d9cd6c329b9d0218b2ec4e505dd340b7\lifecycle-common-2.1.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\478d526506eb8905d8b93fb24e1b2b58\transformed\lifecycle-viewmodel-2.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\ef3b683b18e95c12e53a350274c2585a\transformed\interpolator-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\bea8dcd42bf78809c37af15f50ec0146\transformed\jetified-butterknife-annotations-10.2.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\44052b105be60619a9877e1955e79e9e\transformed\documentfile-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\7b85665373743e7bdb351682ea4786eb\transformed\print-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\fcaefadbf73e44054a762d73d403651e\transformed\jetified-firebase-encoders-json-18.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\c27e09c892a60bbe341c56274a69766d\transformed\jetified-firebase-encoders-17.0.0.jar;C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\androidx.annotation\annotation\1.2.0\57136ff68ee784c6e19db34ed4a175338fadfde1\annotation-1.2.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\5a3285bdb71a1da484e94f6e0b33d5ac\transformed\jetified-annotation-experimental-1.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\0713f97d8ea97cf263a3eb2e777cee35\transformed\jetified-billing-4.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\9372bcfe69eeb27f1ffc6fef2fcde517\transformed\jetified-adjust-android-4.28.9.jar;C:\Users\Administrator\.gradle\caches\transforms-3\d7882366f9313e2af10d7d18d1bfa52f\transformed\jetified-installreferrer-2.2-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\4602a8d5b3648407fb0c5c414fe2d612\transformed\jetified-adjust-android-webbridge-4.28.9.jar;C:\Users\Administrator\.gradle\caches\transforms-3\0065184d0463251970ee3a2f397329a0\transformed\jetified-http-5.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\d4269bac36e16be5c1bb66dc6c6851b9\transformed\jetified-xxpermissions-6.2-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\1ccf5cccabc17fc5a4fb8bb8d2ee6148\transformed\jetified-titlebar-6.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\e797f1313b8ff73ccf8fbd93bfeaecca\transformed\jetified-toast-8.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\79c4c0b174fe2d78f24e413686d54bfc\transformed\jetified-okio-2.2.2.jar;C:\Users\Administrator\.gradle\caches\transforms-3\e8618fc8be5eefd8d3a831332fba4a55\transformed\jetified-gson-2.8.6.jar;C:\Users\Administrator\.gradle\caches\transforms-3\a8070b3b0553239d15ce2e8a898a9eeb\transformed\jetified-play-services-ads-base-19.6.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\a39056c8bb8ff09763268fe81c578f28\transformed\jetified-listenablefuture-1.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\14097ee918f00a6279f84d1384fa87eb\transformed\jetified-startup-runtime-1.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\da3270be62c176ea46b6a4075d423563\transformed\jetified-disklrucache-4.11.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\a5e8285dd1fee90ddbea665bb557c5d7\transformed\jetified-annotations-4.11.0.jar;C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\androidx.constraintlayout\constraintlayout-solver\2.0.2\18fb204d40a3bb60d9e797f25912adad32b5e2ad\constraintlayout-solver-2.0.2.jar;C:\Users\Administrator\.gradle\caches\transforms-3\454031a23c6eb0cc232b0965e44e9088\transformed\jetified-glide-transformations-4.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\744c9f9d38618ced584142152fd07437\transformed\jetified-immersionbar-3.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\1e76c931fbb7eb2c6739ecf6a79fc32e\transformed\jetified-PhotoView-2.3.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\672d7220d26ccda6a4d513e56bcbeac2\transformed\jetified-pageindicatorview-1.0.3-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\fa019cfbac0aee931773be1a68398165\transformed\jetified-SmartRefreshLayout-1.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\be34aa482be50903d0a2bfedc9cf8ac3\transformed\jetified-SmartRefreshHeader-1.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\11c75e19bff27aa5d72c28ef269e493a\transformed\jetified-smart-swipe-1.1.2-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\d05a78832ae919aad0f9fecfcb9599a8\transformed\jetified-smart-swipe-x-1.1.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\da0c40ee74bb7e55acff4930c04f2d91\transformed\jetified-eventbus-3.0.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\3b95910117be4a863c1157e241da1417\transformed\jetified-recyclerview-swipe-1.2.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\35ea903826843c3a912388e85f890236\transformed\jetified-flexbox-2.0.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\9dfe099190bc120ae458eb6392ee108a\transformed\jetified-roundedimageview-2.3.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\af7936873c2654aa766fa8fa1c1c2a9a\transformed\jetified-banner-1.4.9-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\c4b61c5dbbe5bd8291c9be36f00d1c6c\transformed\jetified-FlycoTabLayout_Lib-2.1.2-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\77cb2f31e9a642255a81572df9e93773\transformed\jetified-greendao-3.3.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\b6073095961fde68619de1f4c0122327\transformed\jetified-greendao-api-3.3.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\7788c5cd54f6ee7da451a7cf67863a2c\transformed\multidex-2.0.0-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\bf91f2496ad906b869d31638db5ab24f\transformed\jetified-core-1.3.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\01de3a35b26abd327eecc0d6727b8c9a\transformed\jetified-okhttputils-2.6.2-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\74e8cc532b80229ffda5fe32464c9413\transformed\jetified-fastjson-1.1.70.android.jar;C:\Users\Administrator\.gradle\caches\transforms-3\083373aa0bdca43009602eaca51a5da1\transformed\jetified-happy-dns-0.2.16.jar;C:\Users\Administrator\.gradle\caches\transforms-3\c8a0c564c1d0b4f30aa9a4adb56e6376\transformed\jetified-conscrypt-android-2.2.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\bec1de9f03f504aea95cfb19c61569a4\transformed\jetified-Luban-1.1.8-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\fc392f943d78593617ef8885aa0e57c3\transformed\jetified-XTabLayout-1.1.5-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\9ccd1a53b901907fbb89386b6971a9e5\transformed\jetified-arouter-annotation-1.0.6.jar;C:\Users\Administrator\.gradle\caches\transforms-3\cff318c00f00412d0212e1a1ddfff9ae\transformed\jetified-rxandroid-2.1.1-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\a0301972b56a1e7612d2d05fdf62c58c\transformed\jetified-rxjava-2.2.19.jar;C:\Users\Administrator\.gradle\caches\transforms-3\f1cb3b90ca0bea6507dba8fc33625fb5\transformed\jetified-reactive-streams-1.0.3.jar;C:\Users\Administrator\.gradle\caches\transforms-3\719f87226f48977fa3ea9ecef9cbaab3\transformed\jetified-bolts-android-1.4.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\aff5d6bc6dc7f5fcb6b2a7ca039922e0\transformed\jetified-bolts-applinks-1.4.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\d146c447105f76b7cc3dc965da7148f3\transformed\jetified-bolts-tasks-1.4.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\183bfb4a161bf864c3872321bfc04152\transformed\jetified-core-3.3.3.jar;C:\Users\Administrator\.gradle\caches\transforms-3\93242d58d0a34fe1561a0864fef0904f\transformed\jetified-firebase-annotations-16.0.0.jar;C:\Users\Administrator\.gradle\caches\transforms-3\46086a8649f475975d1240b9efda5e4a\transformed\jetified-javax.inject-1.jar;C:\Users\Administrator\.gradle\caches\transforms-3\743314420d4b618b726ae97e441b3b0d\transformed\jetified-mmkv-static-1.2.2-api.jar;C:\Users\Administrator\.gradle\caches\transforms-3\05cc898ab64935faba5e1fb83bba46b9\transformed\jetified-badgeview-1.1.2-api.jar;E:\gitandroid\android-novel-two\base\build\intermediates\compile_library_classes_jar\debug\classes.jar;E:\gitandroid\android-novel-two\widget\build\intermediates\compile_library_classes_jar\debug\classes.jar;E:\gitandroid\android-novel-two\app\build\tmp\kotlin-classes\debug
+-bootclasspath
+C:\Users\Administrator\AppData\Local\Android\Sdk\platforms\android-31\android.jar;C:\Users\Administrator\AppData\Local\Android\Sdk\build-tools\30.0.2\core-lambda-stubs.jar
+---- Full Classpath ---
+Empty
+---- Compiler Messages ---
+abort ABORT -- (ClassFormatException) File: 'META-INF/versions/9/module-info.class': Invalid byte tag in constant pool: 19
+File: 'META-INF/versions/9/module-info.class': Invalid byte tag in constant pool: 19
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'META-INF/versions/9/module-info.class': Invalid byte tag in constant pool: 19
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWeaver.addAspectsFromJarFile(BcelWeaver.java:260)
+	at org.aspectj.weaver.bcel.BcelWeaver.addLibraryJarFile(BcelWeaver.java:236)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.initBcelWorld(AjBuildManager.java:874)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:249)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:185)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+	at com.xuexiang.xaop.XAOPPlugin$_apply_closure2$_closure3.doCall(XAOPPlugin.groovy:81)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:428)
+	at org.gradle.api.internal.AbstractTask$ClosureTaskAction.doExecute(AbstractTask.java:698)
+	at org.gradle.api.internal.AbstractTask$ClosureTaskAction.lambda$execute$0(AbstractTask.java:685)
+	at org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.reapply(DefaultUserCodeApplicationContext.java:86)
+	at org.gradle.api.internal.AbstractTask$ClosureTaskAction.execute(AbstractTask.java:685)
+	at org.gradle.api.internal.AbstractTask$ClosureTaskAction.execute(AbstractTask.java:660)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter$2.run(ExecuteActionsTaskExecuter.java:498)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:75)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:153)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:56)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.lambda$run$1(DefaultBuildOperationExecutor.java:71)
+	at org.gradle.internal.operations.UnmanagedBuildOperationWrapper.runWithUnmanagedSupport(UnmanagedBuildOperationWrapper.java:45)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:71)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:483)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:466)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.access$300(ExecuteActionsTaskExecuter.java:105)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter$TaskExecution.executeWithPreviousOutputFiles(ExecuteActionsTaskExecuter.java:270)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter$TaskExecution.execute(ExecuteActionsTaskExecuter.java:248)
+	at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:83)
+	at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:37)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:50)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:47)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:200)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:195)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:75)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:153)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:62)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.lambda$call$2(DefaultBuildOperationExecutor.java:76)
+	at org.gradle.internal.operations.UnmanagedBuildOperationWrapper.callWithUnmanagedSupport(UnmanagedBuildOperationWrapper.java:54)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:76)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:47)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:37)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:68)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:38)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:50)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:36)
+	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:41)
+	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:74)
+	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
+	at org.gradle.internal.execution.steps.CreateOutputsStep.execute(CreateOutputsStep.java:51)
+	at org.gradle.internal.execution.steps.CreateOutputsStep.execute(CreateOutputsStep.java:29)
+	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.execute(CaptureStateAfterExecutionStep.java:54)
+	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.execute(CaptureStateAfterExecutionStep.java:35)
+	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:60)
+	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:27)
+	at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:174)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:74)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:45)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:40)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:29)
+	at org.gradle.internal.execution.steps.RecordOutputsStep.execute(RecordOutputsStep.java:36)
+	at org.gradle.internal.execution.steps.RecordOutputsStep.execute(RecordOutputsStep.java:22)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:99)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$0(SkipUpToDateStep.java:92)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:52)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:36)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:84)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:41)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
+	at org.gradle.internal.execution.steps.ResolveCachingStateStep.execute(ResolveCachingStateStep.java:91)
+	at org.gradle.internal.execution.steps.ResolveCachingStateStep.execute(ResolveCachingStateStep.java:49)
+	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:78)
+	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:49)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:105)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:50)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.lambda$execute$2(SkipEmptyWorkStep.java:86)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:86)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:32)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+	at org.gradle.internal.execution.steps.LoadExecutionStateStep.execute(LoadExecutionStateStep.java:43)
+	at org.gradle.internal.execution.steps.LoadExecutionStateStep.execute(LoadExecutionStateStep.java:31)
+	at org.gradle.internal.execution.steps.AssignWorkspaceStep.lambda$execute$0(AssignWorkspaceStep.java:40)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter$TaskExecution$2.withWorkspace(ExecuteActionsTaskExecuter.java:283)
+	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:40)
+	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:30)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:37)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:27)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:49)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:35)
+	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:76)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:184)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:173)
+	at org.gradle.api.internal.tasks.execution.CleanupStaleOutputsExecuter.execute(CleanupStaleOutputsExecuter.java:109)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:56)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:200)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:195)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:75)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:153)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:62)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.lambda$call$2(DefaultBuildOperationExecutor.java:76)
+	at org.gradle.internal.operations.UnmanagedBuildOperationWrapper.callWithUnmanagedSupport(UnmanagedBuildOperationWrapper.java:54)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:76)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:74)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:408)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:395)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:388)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:374)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.lambda$run$0(DefaultPlanExecutor.java:127)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:191)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.executeNextNode(DefaultPlanExecutor.java:182)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:124)
+	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:72)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:193)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:186)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:39)
+	at org.gradle.execution.DefaultBuildWorkExecutor.execute(DefaultBuildWorkExecutor.java:40)
+	at org.gradle.execution.DefaultBuildWorkExecutor.access$000(DefaultBuildWorkExecutor.java:24)
+	at org.gradle.execution.DefaultBuildWorkExecutor$1.proceed(DefaultBuildWorkExecutor.java:48)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:49)
+	at org.gradle.execution.DefaultBuildWorkExecutor.execute(DefaultBuildWorkExecutor.java:40)
+	at org.gradle.execution.DefaultBuildWorkExecutor.execute(DefaultBuildWorkExecutor.java:33)
+	at org.gradle.execution.IncludedBuildLifecycleBuildWorkExecutor.execute(IncludedBuildLifecycleBuildWorkExecutor.java:36)
+	at org.gradle.execution.UndefinedBuildWorkExecutor.execute(UndefinedBuildWorkExecutor.java:48)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.run(BuildOperationFiringBuildWorkerExecutor.java:57)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:75)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:153)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:56)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.lambda$run$1(DefaultBuildOperationExecutor.java:71)
+	at org.gradle.internal.operations.UnmanagedBuildOperationWrapper.runWithUnmanagedSupport(UnmanagedBuildOperationWrapper.java:45)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:71)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:42)
+	at org.gradle.initialization.DefaultGradleLauncher.runWork(DefaultGradleLauncher.java:260)
+	at org.gradle.initialization.DefaultGradleLauncher.doClassicBuildStages(DefaultGradleLauncher.java:173)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuildStages(DefaultGradleLauncher.java:149)
+	at org.gradle.initialization.DefaultGradleLauncher.executeTasks(DefaultGradleLauncher.java:125)
+	at org.gradle.internal.invocation.GradleBuildController$1.create(GradleBuildController.java:71)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:213)
+	at org.gradle.internal.invocation.GradleBuildController.doBuild(GradleBuildController.java:67)
+	at org.gradle.internal.invocation.GradleBuildController.run(GradleBuildController.java:56)
+	at org.gradle.tooling.internal.provider.runner.BuildModelActionRunner.run(BuildModelActionRunner.java:56)
+	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+	at org.gradle.launcher.exec.BuildOutcomeReportingBuildActionRunner.run(BuildOutcomeReportingBuildActionRunner.java:66)
+	at org.gradle.tooling.internal.provider.ValidatingBuildActionRunner.run(ValidatingBuildActionRunner.java:32)
+	at org.gradle.tooling.internal.provider.FileSystemWatchingBuildActionRunner.run(FileSystemWatchingBuildActionRunner.java:90)
+	at org.gradle.launcher.exec.BuildCompletionNotifyingBuildActionRunner.run(BuildCompletionNotifyingBuildActionRunner.java:41)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionRunner$3.call(RunAsBuildOperationBuildActionRunner.java:49)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionRunner$3.call(RunAsBuildOperationBuildActionRunner.java:44)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:200)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:195)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:75)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$3.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:153)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:62)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.lambda$call$2(DefaultBuildOperationExecutor.java:76)
+	at org.gradle.internal.operations.UnmanagedBuildOperationWrapper.callWithUnmanagedSupport(UnmanagedBuildOperationWrapper.java:54)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:76)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionRunner.run(RunAsBuildOperationBuildActionRunner.java:44)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.lambda$execute$0(InProcessBuildActionExecuter.java:59)
+	at org.gradle.composite.internal.DefaultRootBuildState.run(DefaultRootBuildState.java:86)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:58)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:30)
+	at org.gradle.launcher.exec.BuildTreeScopeLifecycleBuildActionExecuter.lambda$execute$0(BuildTreeScopeLifecycleBuildActionExecuter.java:34)
+	at org.gradle.internal.buildtree.BuildTreeState.run(BuildTreeState.java:53)
+	at org.gradle.launcher.exec.BuildTreeScopeLifecycleBuildActionExecuter.execute(BuildTreeScopeLifecycleBuildActionExecuter.java:33)
+	at org.gradle.launcher.exec.BuildTreeScopeLifecycleBuildActionExecuter.execute(BuildTreeScopeLifecycleBuildActionExecuter.java:28)
+	at org.gradle.tooling.internal.provider.ContinuousBuildActionExecuter.execute(ContinuousBuildActionExecuter.java:104)
+	at org.gradle.tooling.internal.provider.ContinuousBuildActionExecuter.execute(ContinuousBuildActionExecuter.java:55)
+	at org.gradle.tooling.internal.provider.SubscribableBuildActionExecuter.execute(SubscribableBuildActionExecuter.java:64)
+	at org.gradle.tooling.internal.provider.SubscribableBuildActionExecuter.execute(SubscribableBuildActionExecuter.java:37)
+	at org.gradle.tooling.internal.provider.SessionScopeLifecycleBuildActionExecuter.lambda$execute$0(SessionScopeLifecycleBuildActionExecuter.java:54)
+	at org.gradle.internal.session.BuildSessionState.run(BuildSessionState.java:67)
+	at org.gradle.tooling.internal.provider.SessionScopeLifecycleBuildActionExecuter.execute(SessionScopeLifecycleBuildActionExecuter.java:50)
+	at org.gradle.tooling.internal.provider.SessionScopeLifecycleBuildActionExecuter.execute(SessionScopeLifecycleBuildActionExecuter.java:36)
+	at org.gradle.tooling.internal.provider.GradleThreadBuildActionExecuter.execute(GradleThreadBuildActionExecuter.java:36)
+	at org.gradle.tooling.internal.provider.GradleThreadBuildActionExecuter.execute(GradleThreadBuildActionExecuter.java:25)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:59)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:31)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:58)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:42)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:47)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:31)
+	at org.gradle.launcher.daemon.server.exec.ExecuteBuild.doBuild(ExecuteBuild.java:65)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.WatchForDisconnection.execute(WatchForDisconnection.java:39)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ResetDeprecationLogger.execute(ResetDeprecationLogger.java:29)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon.execute(RequestStopIfSingleUsedDaemon.java:35)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:78)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:75)
+	at org.gradle.util.Swapper.swap(Swapper.java:38)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.execute(ForwardClientInput.java:75)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogAndCheckHealth.execute(LogAndCheckHealth.java:55)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogToClient.doBuild(LogToClient.java:63)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment.doBuild(EstablishBuildEnvironment.java:84)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy$1.run(StartBuildOrRespondWithBusy.java:52)
+	at org.gradle.launcher.daemon.server.DaemonStateCoordinator$1.run(DaemonStateCoordinator.java:297)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+

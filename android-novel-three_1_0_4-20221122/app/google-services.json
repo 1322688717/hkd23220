@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "561325189662",
+    "project_id": "novellife-1f11a",
+    "storage_bucket": "novellife-1f11a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561325189662:android:a3a4cf5e7bcb3ad8c8dc0f",
+        "android_client_info": {
+          "package_name": "cc.ixcc.novelthree"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "561325189662-ljok435i3l3vffh6i1ivn6u811skr9t6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cc.ixcc.novelthree",
+            "certificate_hash": "7bdc31d305b2414b4d93fffbcecad0be994bbeb2"
+          }
+        },
+        {
+          "client_id": "561325189662-0eatp337ncmaph8klk2gnrb1iq18rm32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5vOEa6T9OcuiTX085uEXCVXcOSPuPVNg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "561325189662-0eatp337ncmaph8klk2gnrb1iq18rm32.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,570 @@
+<resources>
+    <string name="app_name">My Novel</string>
+
+    <!-- google-->
+    <string name="server_client_id">YOUR_CLIENT_ID</string>
+    <string name="google_server_client_id">1061942773092-e1avfr5clm68vm1spdm66n8d4g92l6st.apps.googleusercontent.com</string>
+
+    <!-- facebook -->
+<!--    <string name="facebook_app_id">933849597166208</string>-->
+<!--    <string name="fb_login_protocol_scheme">fb933849597166208</string>-->
+    <string name="facebook_app_id">1109072553053841</string>
+    <string name="fb_login_protocol_scheme">fb1109072553053841</string>
+
+    <!-- 通用的 -->
+    <string name="common_phone_input_hint">Enter mobile phone number</string>
+    <string name="common_phone_input_error">Incorrect cell phone number input</string>
+
+    <string name="common_password_input_error">Please enter the password</string>
+
+    <string name="common_code_input_hint">Enter the verification code</string>
+    <string name="common_code_send">Get Code</string>
+    <string name="common_code_send_hint">The verification code has been sent, please check it</string>
+
+    <string name="common_step_next">Next step</string>
+    <string name="common_step_complete">Finish</string>
+    <string name="common_step_commit">submit</string>
+
+    <string name="common_permission_hint">Please grant permission first</string>
+    <string name="common_permission_fail">Authorization failed, please grant permission manually</string>
+
+    <string name="common_loading">Loading&#8230;</string>
+
+    <string name="common_confirm">OK</string>
+    <string name="common_cancel">Cancel</string>
+
+    <string name="common_year">Year</string>
+    <string name="common_month">Month</string>
+    <string name="common_day">Day</string>
+
+    <string name="common_hour">Time</string>
+    <string name="common_minute">Minute</string>
+    <string name="common_second">Second</string>
+
+    <string name="common_network">There is currently no network connection, please check network settings</string>
+
+    <string name="error_missing_appid_rsa_private">Error: Need to configure APPID and RSA_PRIVATE in PayDemoActivity</string>
+    <string name="pay_success">payment successful:</string>
+    <string name="pay_failed">Payment failed:</string>
+
+    <!-- 网络请求 -->
+    <string name="http_loading">Loading&#8230;</string>
+
+    <string name="http_unknown_error">Request error, unknown error</string>
+    <string name="http_account_error">Account is abnormal, please log in again</string>
+    <string name="http_data_explain_error">Data parsing is abnormal, please wait</string>
+    <string name="http_server_out_time">Server request timed out, please try again later</string>
+    <string name="http_network_error">Request failed, please check network settings</string>
+    <string name="http_server_error">Server connection is abnormal, please try again later</string>
+    <string name="http_request_cancel">The request was interrupted, please try again</string>
+    <string name="loading">Loading</string>
+    <string name="setting_clear_cache_ing">Clearing</string>
+    <string name="setting_clear_cache">Cache cleared</string>
+    <string name="login_auth_ing">Authorizing login</string>
+    <string name="login_auth_success">login successful</string>
+    <string name="login_auth_failure">Authorization failed</string>
+    <string name="login_auth_cancle">Authorization cancellation</string>
+
+    <string name="refresh_header_pulling">Scroll down to refresh</string>
+    <string name="refresh_header_refreshing">Refreshing</string>
+    <string name="refresh_header_loading">loading</string>
+    <string name="refresh_header_release">Refresh immediately after release</string>
+    <string name="refresh_header_finish">Refresh complete</string>
+    <string name="refresh_header_failed">Refresh failed</string>
+    <string name="refresh_header_update">M-d HH:mm</string>
+
+    <string name="refresh_footer_pulling">Scroll up to load more</string>
+    <string name="refresh_footer_release">Release and load immediately</string>
+    <string name="refresh_footer_loading">loading</string>
+    <string name="refresh_footer_refreshing">Refreshing</string>
+    <string name="refresh_footer_finish">Loading completed</string>
+    <string name="refresh_footer_failed">Failed to load</string>
+    <string name="refresh_footer_nothing">No more</string>
+    <string name="load_failure">Network request failed</string>
+    <string name="load_failure_2">Please check your network connection and try again~</string>
+    <string name="no_data">No more</string>
+    <string name="reload">Retry</string>
+
+    <!-- 提示布局 -->
+    <string name="hint_layout_no_data">Empty</string>
+    <string name="hint_layout_error_request">There was an error in the request, click to try again</string>
+    <string name="hint_layout_error_network">Network error, click to try again</string>
+
+    <!-- 地区对话框 -->
+    <string name="address_title">please select the region</string>
+    <string name="address_hint">please choose</string>
+
+    <!-- 日期对话框 -->
+    <string name="date_title">Please select a date</string>
+
+    <!-- 时间对话框 -->
+    <string name="time_title">Please choose a time</string>
+
+    <!-- 升级对话框 -->
+    <string name="update_title">New version found</string>
+
+    <string name="update_content">update content</string>
+
+    <string name="update_no">Talk about it next time</string>
+    <string name="update_yes">update immediately</string>
+    <string name="update_background">Backend Update</string>
+
+    <string name="update_permission_hint">You must first grant permission to download the update normally</string>
+
+    <string name="update_status_running">downloading %d%%</string>
+    <string name="update_status_successful">install now</string>
+    <string name="update_status_failed">download failed</string>
+
+    <string name="update_no_update">Currently the latest version</string>
+
+    <!-- 分享对话框 -->
+    <string name="share_title">Share on moments&#8230;</string>
+
+    <string name="share_platform_wechat">WeChat friends</string>
+    <string name="share_platform_moment">Circle of friends</string>
+    <string name="share_platform_qq">instagram</string>
+    <string name="share_platform_qzone">Facebook</string>
+    <string name="share_platform_weibo">Weibo</string>
+    <string name="share_platform_link">Copy link</string>
+
+    <string name="share_platform_copy_hint">Copied to clipboard</string>
+
+    <!-- 支付密码对话框 -->
+    <string name="pay_title">Please enter payment password</string>
+
+    <!-- 支付密码对话框 -->
+    <string name="select_min_hint">At least %d items must be selected</string>
+    <string name="select_max_hint">You can only select at most %d items</string>
+
+    <!-- 主页 -->
+    <string name="home_exit_hint">Press again to exit</string>
+    <string name="home_nav_shelve">Library</string>
+    <string name="home_nav_stack">Discover</string>
+    <string name="home_nav_weal">Welfare</string>
+    <string name="home_nav_classification">Discover</string>
+    <string name="home_nav_mine">Me</string>
+
+    <!-- 登录 -->
+    <string name="login_register">register</string>
+    <string name="login_forget">forget password?</string>
+    <string name="login_text">Log in</string>
+
+    <string name="login_other">Other login methods</string>
+
+    <!-- 注册 -->
+    <string name="register_title">register</string>
+    <string name="register_hint">The phone number is only used to log in and protect account security</string>
+    <string name="register_password_hint1">Set 6&#8211; 18-digit login password</string>
+    <string name="register_password_hint2">Please enter the password again</string>
+    <string name="register_password_input_error">The two password entries are inconsistent, please re-enter</string>
+
+    <!-- 设置 -->
+    <string name="setting_title">set up</string>
+
+    <string name="setting_language">Language switch</string>
+    <string name="setting_language_simple">Chinese,Simplified</string>
+    <string name="setting_language_complex">Chinese,Traditional</string>
+
+    <string name="setting_update">Check for updates</string>
+    <string name="setting_cache">Empty the cache</string>
+    <string name="setting_auto">auto login</string>
+    <string name="setting_agreement">Privacy agreement</string>
+    <string name="setting_about">about us</string>
+    <string name="setting_exit">Log out</string>
+
+    <!-- 关于 -->
+    <string name="about_title">about us</string>
+    <string name="about_author"><font color="#85b84f">Android</font> mine</string>
+
+    <string name="about_copyright">Copyright © 2018 &#8211; 2020</string>
+
+    <!-- 忘记密码 -->
+    <string name="password_forget_title">forget the password</string>
+
+    <!-- 重置密码 -->
+    <string name="password_reset_title">Setting login password</string>
+    <string name="password_reset_phone_hint1">Set 6&#8211; 18-digit login password</string>
+    <string name="password_reset_phone_hint2">Re-enter the password</string>
+    <string name="password_reset_input_error">The two password entries are inconsistent, please re-enter</string>
+    <string name="password_reset_success">Password reset successfully</string>
+
+    <!-- 校验手机号 -->
+    <string name="phone_verify_title">Phone number verification</string>
+    <string name="phone_verify_current_phone">Current phone number：%s</string>
+
+    <!-- 修改手机号 -->
+    <string name="phone_reset_title">Modify mobile phone number</string>
+    <string name="phone_reset_change_hint">Bind successfully, please use the new cell phone number to log in next time</string>
+    <string name="phone_reset_commit">Bind now</string>
+
+    <string name="phone_reset_commit_succeed">The binding is successful, please use the new phone number to log in next time you log in录</string>
+
+    <!-- 个人资料 -->
+    <string name="personal_data_title">Profile</string>
+    <string name="personal_data_head">Profile Photo</string>
+
+    <string name="personal_data_id">User ID</string>
+    <string name="personal_data_name">Nick name</string>
+    <string name="personal_data_name_hint">Set nickname</string>
+
+    <string name="personal_data_address">Region</string>
+    <string name="personal_data_address_hint">please choose</string>
+
+    <string name="personal_data_phone">mobile phone number</string>
+    <string name="personal_data_phone_hint">Bind now</string>
+
+    <!-- 浏览器 -->
+    <string name="web_title">Page loading&#8230;</string>
+
+    <!-- 异常捕捉 -->
+    <string name="crash_error_hint">An unexpected error occurred \n Sorry for the inconvenience</string>
+
+    <string name="crash_error_restart">Restart</string>
+    <string name="crash_error_log">View log</string>
+
+    <string name="crash_error_details">Error details</string>
+    <string name="crash_error_info">Error message</string>
+    <string name="crash_copy_log">Copy log</string>
+    <string name="crash_close">closure</string>
+
+    <!-- 图片选择 -->
+    <string name="photo_title">Picture selection</string>
+    <string name="photo_all">All pictures</string>
+
+    <string name="photo_total">% D total</string>
+
+    <string name="photo_max_hint">Only %d pictures can be selected this time</string>
+
+    <string name="photo_launch_fail">Unable to start camera</string>
+    <string name="photo_picture_error">Picture error</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_select_file">Import books</string>
+    <string name="action_search_file">Search file</string>
+    <string name="action_add_bookmark">Add bookmark</string>
+    <string name="action_read_book">read</string>
+    <string name="open_drawer">Turn on</string>
+    <string name="close_drawer">Close</string>
+
+    <string name="press_twice_to_exit">Click twice in a row to exit</string>
+    <string name="root">Root directory</string>
+    <string name="add_files">Add to bookshelf</string>
+    <string name="choose_all">select all</string>
+    <string name="delete">Cancel</string>
+    <string name="bookpop_size">Font</string>
+    <string name="bookpop_light">brightness</string>
+    <string name="bookpop_card">Bookmarks</string>
+    <string name="bookpop_send">Jump</string>
+
+    <string name="read_setting_directory">Catalog</string>
+    <string name="read_setting_night">Night time</string>
+    <string name="read_setting_day">Daytime</string>
+    <string name="read_setting_pagemode">Turn page</string>
+    <string name="read_light">brightness</string>
+    <string name="read_setting_set">set up</string>
+    <string name="read_setting_pre">Previous chapter</string>
+    <string name="read_setting_next">Next chapter</string>
+
+    <string name="setting_system">system</string>
+    <string name="setting_dark">dark</string>
+    <string name="setting_bright">Bright</string>
+    <string name="setting_add">T+</string>
+    <string name="setting_subtract">T-</string>
+    <string name="setting_default">default</string>
+
+    <string name="font_default">system default</string>
+    <string name="font_qihei">Yi Chuang Qi Hei</string>
+    <string name="font_xinshou">Song Ti</string>
+    <string name="font_wawa">Doll body</string>
+    <string name="font_fzxinghei">Line black</string>
+    <string name="font_fzkatong">Cartoon</string>
+    <string name="font_bysong">Song Ti</string>
+
+    <!--    <string name="page_mode_simulation">仿真</string>-->
+    <string name="page_mode_simulation">Turn page</string>
+    <string name="page_mode_cover">cover</string>
+    <string name="page_mode_slide">Panning</string>
+    <string name="page_mode_updown">up and down</string>
+    <string name="page_mode_none">None</string>
+
+    <string name="readseting">set up</string>
+    <string name="lianzai">Serialized</string>
+    <string name="wanjie">over</string>
+    <string name="manhua">comics</string>
+    <string name="xiaoshuo">novel</string>
+    <string name="tingshu">Audio books</string>
+
+    <string name="img_camera_cancel">Cancel photo</string>
+    <string name="img_alumb_cancel">cancel selection</string>
+    <string name="img_crop_cancel">Cancel crop</string>
+    <string name="FILE_PROVIDER">cc.ixcc.novelthree.fileprovider</string>
+    <string name="permission_storage_refused">You have denied the permission to read and write files, please go to the settings to modify</string>
+    <string name="permission_camera_refused">You have denied the permission to use the camera, please go to the settings to modify</string>
+    <string name="permission_record_audio_refused">You have denied the permission to use the microphone, please go to the settings to modify</string>
+    <string name="permission_location_refused">You have denied permission to use location,please go to the settings to modify</string>
+    <string name="permission_read_phone_state_refused">You have denied the permission to read the phone information, please go to the settings to modify</string>
+
+    <!--榜单分类-->
+    <string-array name="nb_fragment_bill_book">
+        <item>Weekly list</item>
+        <item>Monthly list</item>
+        <item>Total list</item>
+    </string-array>
+
+    <!--CollBook的长按点击-->
+    <string-array name="nb_menu_net_book">
+        <item>@string/nb.menu.action.top</item>
+        <item>@string/nb.menu.action.cache</item>
+        <item>@string/nb.menu.action.delete</item>
+        <item>@string/nb.menu.action.batch_manage</item>
+    </string-array>
+
+    <string-array name="nb_menu_local_book">
+        <item>@string/nb.menu.action.top</item>
+        <item>@string/nb.menu.action.delete</item>
+        <item>@string/nb.menu.action.batch_manage</item>
+    </string-array>
+
+    <!--常用-->
+    <string name="nb.common.tip">tips</string>
+    <string name="nb.common.sure">OK</string>
+    <string name="nb.common.cancel">Cancel</string>
+
+    <!--网络相关-->
+
+    <string name="nb.net.error_tip">There seems to be no internet</string>
+
+    <!--fragment_title:主页的名字-->
+    <string name="nb.fragment.title.bookshelf">bookshelf</string>
+    <string name="nb.fragment.title.community">Community</string>
+    <string name="nb.fragment.title.find">discover</string>
+
+    <!--fragment-->
+    <string name="nb.fragment.community.comment">Comprehensive discussion area</string>
+    <string name="nb.fragment.community.discussion">Book Review Area</string>
+    <string name="nb.fragment.community.help">Book Shortage Help Area</string>
+    <string name="nb.fragment.community.girl">Girls area</string>
+    <string name="nb.fragment.community.compose">Original area</string>
+
+    <!--fragment 主题书单-->
+    <string name="nb.fragment.book_list.hot">Hottest this week</string>
+    <string name="nb.fragment.book_list.newest">Latest release</string>
+    <string name="nb.fragment.book_list.collect">Most Favorites</string>
+
+    <string name="nb.fragment.book_list.message">A total of %1$d books |&#160; %2$d people favorite</string>
+
+    <!--评论相关-->
+    <string name="nb.comment.floor">%1$d above &#160;</string>
+    <string name="nb.comment.like_count">❤%1$d Sympathy</string>
+    <string name="nb.comment.best_comment">Praise</string>
+    <string name="nb.comment.comment_count">%1$d total comments</string>
+    <string name="nb.comment.reply_floor">(%1$d Sympathy)</string>
+    <string name="nb.comment.reply_nickname">reply %1$s</string>
+    <string name="nb.comment.empty_comment">no comment yet</string>
+
+    <!--书评区相关-->
+    <string name="nb.review.book_type">[%1$s]</string>
+    <string name="nb.review.recommend">%1$d People recommend</string>
+    <string name="nb.review.helpful">Helpful</string>
+    <string name="nb.review.unhelpful">useless</string>
+    <string name="nb.review.book_score">Rate book reviews</string>
+    <string name="nb.review.master_score">Scoring：</string>
+
+
+    <!--find-->
+    <string name="nb.fragment.find.top">Leaderboard</string>
+    <string name="nb.fragment.find.topic">Subject book list</string>
+    <string name="nb.fragment.find.sort">Classification</string>
+    <string name="nb.fragment.find.listen">audiobook</string>
+
+    <!--dialog-->
+    <string name="nb.dialog.text.introduce">We will recommend corresponding novels according to your preferences \n</string>
+    <string name="nb.dialog.text.choose_tip">--Please choose your preference--</string>
+    <string name="nb.dialog.text.boy_story">Boy Fiction</string>
+    <string name="nb.dialog.text.girl_story">Girl Fiction</string>
+
+    <!--menu-->
+    <string name="nb.menu.action.search">search</string>
+    <string name="nb.menu.action.login">please sign in</string>
+    <string name="nb.menu.action.message">My message</string>
+    <string name="nb.menu.action.download">Download list</string>
+    <string name="nb.menu.action.sync">Synchronize bookshelf</string>
+    <string name="nb.menu.action.scan">Scan local books</string>
+    <string name="nb.menu.action.transfer">WIFI transfer book</string>
+    <string name="nb.menu.action.feedback">Feedback</string>
+    <string name="nb.menu.action.night_mode">Night mode</string>
+    <string name="nb.menu.action.setting">set up</string>
+
+    <string name="nb.menu.action.top">Top</string>
+    <string name="nb.menu.action.cache">Cache</string>
+    <string name="nb.menu.action.delete">delete</string>
+    <string name="nb.menu.action.batch_manage">Batch management</string>
+
+    <!--SplashActivity-->
+    <string name="nb.splash.skip">jump over</string>
+
+    <!--user:用户的信息-->
+    <string name="nb.user.lv">&#160;lv.%1$d</string>
+    <!--book:书籍的信息-->
+    <string name="nb.book.type">[%1$s]</string>
+    <string name="nb.book.recommend">%1$d People recommend</string>
+    <string name="nb.book.message">%1$d people are chasing |&#160; %2$s%% reader retention</string>
+    <string name="nb.book.word">|&#160;%1$d&#160;Million words</string>
+    <!--sort:每类的书-->
+    <string name="nb.sort.book_count">%1$d Book</string>
+
+    <!--tag: 标签-->
+    <string name="nb.tag.all">all</string>
+    <string name="nb.tag.sex">gender</string>
+    <string name="nb.tag.boy">Boys</string>
+    <string name="nb.tag.girl">girl</string>
+
+
+    <!--book_detail : -->
+    <string name="nb.book_detail.hot_comment">Popular Book Reviews</string>
+    <string name="nb.book_detail.community">%1$s Community</string>
+    <string name="nb.book_detail.posts_count">共有%1$d Posts</string>
+    <string name="nb.book_detail.recommend_book_list">Recommended book list</string>
+    <string name="nb.book_detail.chase_update">Chasing</string>
+    <string name="nb.book_detail.give_up">give up</string>
+    <string name="nb.book_detail.start_read">Start reading</string>
+
+    <!--DownloadTask:书籍下载-->
+    <string name="nb.download.add_succeed">Successfully added to the download list</string>
+    <string name="nb.download.exist">The task already exists</string>
+    <string name="nb.download.load_all">All chapters have been cached</string>
+    <string name="nb.download.progress">%1$d/%2$d</string>
+    <string name="nb.download.chapter_scope">(%1$d-%2$d chapter)</string>
+
+    <string name="nb.download.start">continue</string>
+    <string name="nb.download.pause">pause</string>
+    <string name="nb.download.wait">wait</string>
+    <string name="nb.download.error">mistake</string>
+    <string name="nb.download.finish">Finish</string>
+
+    <string name="nb.download.loading">downloading</string>
+    <string name="nb.download.waiting">Waiting</string>
+    <string name="nb.download.pausing">Paused</string>
+    <string name="nb.download.complete">completed</string>
+    <string name="nb.download.source_error">Resource or network error</string>
+
+    <!--mode-->
+    <string name="nb.mode.night">at night</string>
+    <string name="nb.mode.dashang">Reward</string>
+    <string name="nb.mode.morning">Daytime</string>
+
+    <!--read-->
+    <string name="nb.read.community">Community</string>
+    <string name="nb.read.brief">Introduction</string>
+    <string name="nb.read.setting">set up</string>
+    <string name="nb.read.download">Cache</string>'
+    <string name="nb.read.category">contents</string>
+    <string name="nb.read.no_chapter">Chapter %1$d (%2$d)</string>
+
+    <!--file system-->
+    <string name="nb.file.sub_count">%1$d items</string>
+    <string name="nb.file.path">Memory card: %1$s</string>
+    <string name="nb.file.add_shelf">Add to bookshelf</string>
+    <string name="nb.file.add_shelves">Add to bookshelf (%1$d)</string>
+    <string name="nb.file.add_succeed">Successfully added %1$d book</string>
+
+    <!--search-->
+    <string name="nb.search.book.brief">%1$d people are chasing | %2$s reader retention | %3$s</string>
+
+    <!--BookShelf-->
+    <string name="nb.bookshelf.book_not_exist">The file does not exist or the content is empty, delete it?</string>
+
+    <string name="aboutContent">Novel reading is focused on providing a more comfortable reading experience, focusing on local reading, the operation method is simple and easy to use, and currently supports the txt format.</string>
+
+    <string-array name="voicer_cloud_entries">
+        <item>小燕—女青、中英、普通话</item>
+        <item>小艾—女青、中英、普通话、支持情感</item>
+        <item>小宇—男青、中英、普通话</item>
+        <item>凯瑟琳—女青、英</item>
+        <item>亨利—男青、英</item>
+        <item>玛丽—女青、英</item>
+        <item>小研—女青、中英、普通话</item>
+        <item>小琪—女青、中英、普通话</item>
+        <item>小峰—男青、中英、普通话</item>
+        <item>小梅—女青、中英、粤语</item>
+        <item>小莉—女青、中英、台湾普通话</item>
+        <item>小蓉—女青、中、四川话</item>
+        <item>小芸—女青、中、东北话</item>
+        <item>小坤—男青、中、河南话</item>
+        <item>小强—男青、中、湖南话</item>
+        <item>小莹—女青、中、陕西话</item>
+        <item>小新—男童、中、普通话</item>
+        <item>楠楠—女童、中、普通话</item>
+        <item>老孙—男老、中、普通话</item>
+    </string-array>
+    <string-array name="voicer_cloud_values">
+        <item>xiaoyan</item>
+        <item>aisxa</item>
+        <item>xiaoyu</item>
+        <item>catherine</item>
+        <item>henry</item>
+        <item>vimary</item>
+        <item>vixy</item>
+        <item>xiaoqi</item>
+        <item>vixf</item>
+        <item>xiaomei</item>
+        <item>xiaolin</item>
+        <item>xiaorong</item>
+        <item>xiaoqian</item>
+        <item>xiaokun</item>
+        <item>xiaoqiang</item>
+        <item>vixying</item>
+        <item>xiaoxin</item>
+        <item>nannan</item>
+        <item>vils</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="auto_buy">Automatic buy the next chapter</string>
+    <string name="free">free</string>
+    <string name="vipTitStr">Top up to get coins</string>
+    <string name="text_vip_center">Member Centre</string>
+    <string name="text_vip_go">Go to join</string>
+
+
+    <string-array name="stream_entries">
+        <item>call</item>
+        <item>system</item>
+        <item>Ringtones</item>
+        <item>music</item>
+        <item>Alarm</item>
+        <item>Notification</item>
+    </string-array>
+
+    <string-array name="timer_entries">
+        <item>Timed off</item>
+        <item>Stop playing after 45 minutes</item>
+        <item>Stop playing after 1 hour</item>
+        <item>Stop playing after 2 hours</item>
+        <item>Stop playing after the current chapter ends</item>
+    </string-array>
+
+    <string-array name="reword_entries">
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+    </string-array>
+
+    <string name="lis_menu_add_shelf">Add to bookshelf</string>
+    <string name="lis_menu_added_shelf">Already in the bookshelf</string>
+    <string name="lis_menu_time">timing</string>
+    <string name="lis_menu_review">Comment</string>
+    <string name="lis_menu_category">contents</string>
+    <string name="reword_user_format">%s... %d people reward</string>
+    <string name="classification_man">Male</string>
+    <string name="classification_woman">Female</string>
+    <string name="ad_timer">Advertising is to better support genuine</string>
+    <string name="ad_timer_tip">You need to wait 15 seconds to read the next chapter</string>
+    <string name="look_videoad">Watch the video to avoid 30 minutes of advertising</string>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/dialog_ui_round_size"
+    app:cardElevation="0px"
+    tools:context="cc.ixcc.novelthree.ui.dialog.UIDialog">
+
+    <LinearLayout
+        android:id="@+id/ll_ui_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+<!--        <com.jiusen.widget.view.SmartTextView-->
+<!--            android:id="@+id/tv_ui_title"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:textColor="#333333"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold"-->
+<!--            tools:text="标题" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="邀请码"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ff0a1c33"
+            android:textSize="17sp"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            style="@style/EditTextStyle"
+            android:id="@+id/tv_input_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:hint="请输入邀请码"
+            android:inputType="text"
+            android:background="@drawable/bg_dialog_invite"
+            android:paddingStart="10dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            tools:context="cc.ixcc.novelthree.ui.dialog.InputDialog" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_commit"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="OK" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

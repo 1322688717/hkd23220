@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/viewPoint"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/ivLikeCover"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="matrix"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintDimensionRatio="375:389"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <cc.ixcc.novelthree.widget.ArcImageView
+        android:id="@+id/ivLikeCover"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@mipmap/banner"
+        android:scaleType="matrix"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="375:280"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/caiLike"
+        android:layout_width="200dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="40dp"
+        android:src="@mipmap/icon_cai_like"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.28" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/likeIv0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="95:133"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/likeIv1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53"
+        app:layout_constraintWidth_percent="0.25"
+        app:riv_corner_radius="5dp" />
+
+    <TextView
+        app:layout_constraintLeft_toLeftOf="@id/likeIv0"
+        app:layout_constraintTop_toTopOf="@id/likeIv0"
+        android:id="@+id/tvVip0"
+        android:background="@drawable/bg_book_vip"
+        android:text="VIP"
+        android:gravity="center"
+        android:textSize="@dimen/tvVipSize"
+        android:textStyle="italic|bold"
+        android:visibility="gone"
+        android:textColor="@color/ColorBookVip"
+        android:layout_width="27dp"
+        android:layout_height="14dp"/>
+
+    <TextView
+        android:id="@+id/likeName0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxEms="6"
+        android:maxLines="1"
+        android:text="The Alpha King's Lust"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="@id/likeIv0"
+        app:layout_constraintRight_toRightOf="@id/likeIv0"
+        app:layout_constraintTop_toBottomOf="@id/likeIv0" />
+
+    <ImageView
+        android:id="@+id/ivDelLike0"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:src="@mipmap/icon_x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/likeIv0"
+        app:layout_constraintRight_toRightOf="@id/likeIv0"
+        app:layout_constraintTop_toBottomOf="@id/likeName0" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/likeIv1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="95:133"
+        app:layout_constraintLeft_toRightOf="@id/likeIv0"
+        app:layout_constraintRight_toLeftOf="@id/likeIv2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53"
+        app:layout_constraintWidth_percent="0.25"
+        app:riv_corner_radius="5dp" />
+
+    <TextView
+        app:layout_constraintLeft_toLeftOf="@id/likeIv1"
+        app:layout_constraintTop_toTopOf="@id/likeIv1"
+        android:id="@+id/tvVip1"
+        android:visibility="gone"
+        android:background="@drawable/bg_book_vip"
+        android:text="VIP"
+        android:gravity="center"
+        android:textSize="@dimen/tvVipSize"
+        android:textStyle="italic|bold"
+        android:textColor="@color/ColorBookVip"
+        android:layout_width="27dp"
+        android:layout_height="14dp"/>
+
+    <TextView
+        android:id="@+id/likeName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxEms="6"
+        android:maxLines="1"
+        android:text="The Alpha King's Lust"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="@id/likeIv1"
+        app:layout_constraintRight_toRightOf="@id/likeIv1"
+        app:layout_constraintTop_toBottomOf="@id/likeIv1" />
+
+    <ImageView
+        android:id="@+id/ivDelLike1"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:src="@mipmap/icon_x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/likeIv1"
+        app:layout_constraintRight_toRightOf="@id/likeIv1"
+        app:layout_constraintTop_toBottomOf="@id/likeName1" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/likeIv2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="95:133"
+        app:layout_constraintLeft_toRightOf="@id/likeIv1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53"
+        app:layout_constraintWidth_percent="0.25"
+        app:riv_corner_radius="5dp" />
+
+    <TextView
+        app:layout_constraintLeft_toLeftOf="@id/likeIv2"
+        app:layout_constraintTop_toTopOf="@id/likeIv2"
+        android:id="@+id/tvVip2"
+        android:visibility="gone"
+        android:background="@drawable/bg_book_vip"
+        android:text="VIP"
+        android:gravity="center"
+        android:textSize="@dimen/tvVipSize"
+        android:textStyle="italic|bold"
+        android:textColor="@color/ColorBookVip"
+        android:layout_width="27dp"
+        android:layout_height="14dp"/>
+
+    <TextView
+        android:id="@+id/likeName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxEms="6"
+        android:maxLines="1"
+        android:text="The Alpha King's Lust"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="@id/likeIv2"
+        app:layout_constraintRight_toRightOf="@id/likeIv2"
+        app:layout_constraintTop_toBottomOf="@id/likeIv2" />
+
+    <ImageView
+        android:id="@+id/ivDelLike2"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:src="@mipmap/icon_x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/likeIv2"
+        app:layout_constraintRight_toRightOf="@id/likeIv2"
+        app:layout_constraintTop_toBottomOf="@id/likeName2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context="cc.ixcc.novelthree.ui.fragment.myFragment.MineFragment">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/title"
+        style="@style/TitleBarStyle"
+        app:lineVisible="false"
+        app:title="Must read today" />
+
+<!--    <com.androidkun.xtablayout.XTabLayout-->
+<!--        android:id="@+id/xTablayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="130px"-->
+<!--        app:xTabBackgroundColor="#ff0"-->
+<!--        app:xTabDividerWidthWidthText="true"-->
+<!--        app:xTabMode="scrollable"-->
+<!--        app:xTabIndicatorColor="#0f0"-->
+<!--        app:xTabIndicatorHeight="4dp"-->
+<!--        app:xTabIndicatorRoundX="2dp"-->
+<!--        app:xTabIndicatorRoundY="2dp"-->
+<!--        app:xTabSelectedTextColor="#f00"-->
+<!--        app:xTabTextColor="#000"-->
+<!--        app:xTabTextSize="15sp"-->
+<!--        app:xTabDisplayNum="4"-->
+<!--        app:xTabSelectedTextSize="20sp"-->
+<!--        app:xTabDividerWidth="2dp"-->
+<!--        app:xTabDividerHeight="15dp"-->
+<!--        app:xTabDividerColor="#000"/>-->
+
+    <com.androidkun.xtablayout.XTabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:xTabBackgroundColor="@color/transparent"
+        app:xTabDisplayNum="0"
+        android:paddingBottom="4dp"
+        app:xTabDividerColor="@color/transparent"
+        app:xTabDividerHeight="15dp"
+        app:xTabDividerWidth="0dp"
+        app:xTabDividerWidthWidthText="false"
+        app:xTabIndicatorColor="#eb515d"
+        app:xTabIndicatorHeight="3dp"
+        app:xTabIndicatorWidth="16dp"
+        app:xTabMinWidth="0dp"
+        app:xTabMode="fixed"
+        app:xTabSelectedTextColor="#eb515d"
+        app:xTabSelectedTextSize="15sp"
+        app:xTabTextBold="false"
+        app:xTabTextColor="#333333"
+        app:xTabTextSelectedBold="true"
+        app:xTabTextSize="15sp"
+        android:visibility="gone"
+        />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

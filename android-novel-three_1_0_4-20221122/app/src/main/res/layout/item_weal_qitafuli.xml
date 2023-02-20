@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="17.5dp"
+        android:paddingBottom="19.5dp">
+
+        <LinearLayout
+            android:id="@+id/fuli_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <View
+                android:id="@+id/fuli_line"
+                android:layout_width="1dp"
+                android:layout_height="9dp"
+                android:background="#4D77FD" />
+
+            <TextView
+                android:id="@+id/fuli_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.5dp"
+                android:layout_toRightOf="@+id/line"
+                android:text="下载游戏"
+                android:textColor="#ff303133"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fuli_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18.5dp"
+            android:layout_toRightOf="@id/fuli_time"
+            android:drawableLeft="@mipmap/icon_coin"
+            android:drawablePadding="1dp"
+            android:text="+70书豆"
+            android:textColor="@color/colorButtonPressed"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/fuli_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fuli_coin"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="9.5dp"
+            android:text="下载游戏体验10分钟即可领30书豆"
+            android:textColor="#ffbfc2cc"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/fuli_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.5dp"
+            android:background="@drawable/bg_board_gray3"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="5.5dp"
+            android:paddingBottom="5.5dp"
+            android:text="去下载"
+            android:textColor="#ff303133"
+            android:textSize="13sp" />
+    </RelativeLayout>
+</LinearLayout>

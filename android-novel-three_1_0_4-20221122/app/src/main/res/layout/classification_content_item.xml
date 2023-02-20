@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10"
+    android:paddingBottom="15dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/book_img"
+            android:layout_width="80dp"
+            android:background="@mipmap/book_cover_def"
+            android:layout_height="105dp"
+            app:riv_corner_radius="5dp"
+            android:scaleType="centerCrop"/>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Domineering Billionaire Husband: Please Love Me Gently"
+                android:textColor="@color/books_name"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tt_full_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="10dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingTop="4dp"
+                android:paddingRight="7dp"
+                android:paddingBottom="4dp"
+                android:text="Rommance"
+                android:textColor="@color/settings_title"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                android:layout_toLeftOf="@+id/hot"
+                android:drawablePadding="5dp"
+                android:ellipsize="end"
+                android:visibility="gone"
+                android:textColor="#ff303133"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                android:drawableLeft="@mipmap/hot_icon"
+                android:drawablePadding="5dp"
+                android:paddingRight="7dp"
+                android:text="452.3Hot"
+                android:textColor="#fff5325e"
+                android:textSize="10sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvVip"
+        android:background="@drawable/bg_book_vip"
+        android:text="VIP"
+        android:gravity="center"
+        android:textSize="@dimen/tvVipSize"
+        android:visibility="gone"
+        android:textStyle="italic|bold"
+        android:textColor="@color/ColorBookVip"
+        android:layout_width="27dp"
+        android:layout_height="14dp"/>
+</RelativeLayout>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@mipmap/vip_bg"
+    tools:layoutAnimation="@null">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/reboundscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="240dp">
+
+                <com.hjq.bar.TitleBar
+                    android:id="@+id/title"
+                    style="@style/TitleBarStyle"
+                    android:background="@color/transparent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:leftIcon="@mipmap/bar_icon_back_white"
+                    app:lineVisible="false"
+                    app:title="Membership Card"
+                    app:titleColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/bg0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/club_card_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv0"
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginBottom="15.5dp"
+                    android:background="@drawable/btn_open_vip"
+                    android:gravity="center"
+                    android:text="Open"
+                    android:textColor="#ff564523"
+                    android:textSize="15sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@id/bg0"
+                    app:layout_constraintLeft_toLeftOf="@id/bg0" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/unVipGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:constraint_referenced_ids="bg0,tv0" />
+
+                <ImageView
+                    android:id="@+id/bg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/vip_card_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginBottom="2dp"
+                    android:textColor="#735a29"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/tvVipTime"
+                    app:layout_constraintLeft_toLeftOf="@id/bg1"
+                    app:layout_constraintTop_toTopOf="@id/bg1"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    tools:text="Honorable VIP" />
+
+                <TextView
+                    android:id="@+id/tvVipTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#a98d55"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@id/tv1"
+                    app:layout_constraintLeft_toLeftOf="@id/bg1"
+                    app:layout_constraintTop_toBottomOf="@id/tvName"
+                    tools:text="Expires on 2021.10.11" />
+
+                <ImageView
+                    android:id="@+id/ivVipIcon"
+                    android:layout_width="24.5dp"
+                    android:layout_height="23dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/icon_vip_black"
+                    app:layout_constraintBottom_toBottomOf="@id/tvName"
+                    app:layout_constraintLeft_toRightOf="@id/tvName"
+                    app:layout_constraintTop_toTopOf="@id/tvName" />
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/btn_open_vip"
+                    android:gravity="center"
+                    android:text="Join"
+                    android:textColor="#ff564523"
+                    android:textSize="15sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@id/bg1"
+                    app:layout_constraintLeft_toLeftOf="@id/bg1" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/vipGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:constraint_referenced_ids="bg1,tv1,ivVipIcon,tvVipTime,tvName" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_pakage_hd"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="50dp"
+                    android:drawableLeft="@mipmap/vip_sign"
+                    android:drawablePadding="4dp"
+                    android:text="Combo"
+                    android:textColor="#e8be4a"
+                    android:textSize="16sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/taocan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="20dp">
+
+
+                    <TextView
+                        android:id="@+id/btn_commit"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_conner_gold2"
+                        android:gravity="center"
+                        android:text="Open"
+                        android:textColor="#ff3f1e11"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="unlimited reading"
+                        android:textColor="#ffcecece"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/month_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:text="of all  books"
+                        android:textColor="#ffcecece"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="28dp"
+                android:drawableLeft="@mipmap/vip_sign"
+                android:drawablePadding="4dp"
+                android:text="Benefits"
+                android:textColor="#ff303133"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/quanyi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

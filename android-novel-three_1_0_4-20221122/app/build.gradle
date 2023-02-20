@@ -1,0 +1,264 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.xuexiang.xaop'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.greenrobot.greendao'
+apply from: "../config.gradle"
+apply plugin: 'android-junk-code'
+android {
+    defaultConfig {
+        applicationId "cc.ixcc.novelthree"
+        //在此配置AppId
+        buildConfigField("String", "applicationId", "\"cc.ixcc.novelthree\"")
+
+        // 仅保留中文语种的资源
+        resConfig 'cn'
+        // 仅保留 xxhdpi 图片资源（目前主流分辨率 1920 * 1080）
+        resConfig 'xxhdpi'
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        // 阿里巴巴矢量图库：https://www.iconfont.cn/
+        vectorDrawables.useSupportLibrary = true
+
+        // 混淆配置
+        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-app.pro'
+
+        //测试服
+        //buildConfigField("String", "host", "\"https://apixs.wykcshi.com/\"")
+
+        //正式服
+        //buildConfigField("String", "host", "\"https://apius.wykcshi.com/\"")
+
+        //
+        buildConfigField("String", "host", "\"https://api.sjapp51.com/\"")
+
+
+        resValue('string', 'file_provider', 'cc.ixcc.novelthree.provider')
+    }
+
+    // APK 签名的那些事：https://www.jianshu.com/p/a1f8e5896aa2
+    signingConfigs {
+        debug {
+            storeFile file('../novelthree.jks')
+            storePassword '123456'
+            keyPassword '123456'
+            keyAlias 'key0'
+        }
+        releaseConfig {
+            storeFile file('../novelthree.jks')
+            storePassword '123456'
+            keyPassword '123456'
+            keyAlias 'key0'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+    greendao {
+        schemaVersion 2
+        daoPackage 'cc.ixcc.novelthree.jsReader.model.gen'
+        targetGenDir 'src/main/java'
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            jniDebuggable true
+            // 移除无用的资源文件
+            shrinkResources false
+            // ZipAlign 优化
+            zipAlignEnabled false
+            // 设置混淆
+            minifyEnabled false
+
+            signingConfig signingConfigs.debug
+
+        }
+
+        release {
+            // 胡志豪修改，release下需要把debuggable设置false 否则谷歌无法上传
+            debuggable false
+            jniDebuggable false
+            // 移除无用的资源文件
+            shrinkResources false
+            // ZipAlign 优化
+            zipAlignEnabled false
+            // 设置混淆
+            minifyEnabled false
+
+            signingConfig signingConfigs.releaseConfig
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    androidJunkCode {
+        def config = {
+            packageBase = "cn.hx.plugin.ui"
+            packageCount = 30
+            activityCountPerPackage = 3
+            excludeActivityJavaFile = false
+            otherCountPerPackage = 50
+            methodCountPerClass = 20
+            resPrefix = "junk_"
+            drawableCount = 300
+            stringCount = 300
+        }
+        variantConfig {
+            debug config
+            release config
+        }
+    }
+}
+
+dependencies {
+    // 基础库（不包任何第三方框架）
+    implementation project(':base')
+    // 自定义 View
+    implementation project(':widget')
+    // 网络请求框架：https://github.com/getActivity/EasyHttp
+    implementation 'com.hjq:http:5.0'
+    // 权限请求框架：https://github.com/getActivity/XXPermissions
+    implementation 'com.hjq:xxpermissions:6.2'
+    // 标题栏框架：https://github.com/getActivity/TitleBar
+    implementation 'com.hjq:titlebar:6.0'
+    // 吐司框架：https://github.com/getActivity/ToastUtils
+    implementation 'com.hjq:toast:8.0'
+    // OkHttp 框架：https://github.com/square/okhttp
+    implementation 'com.squareup.okhttp3:okhttp:3.12.8'
+    // JSON 解析框架：https://github.com/google/gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    //Google Admob
+    implementation 'com.google.android.gms:play-services-ads:19.6.0'
+
+
+    // ButterKnife 注解库：https://github.com/JakeWharton/butterknife
+    if (project.hasProperty('android.injected.invoked.from.ide')) {
+        // 开发时使用运行时注解，提升 IDE 编译速度
+        implementation 'com.jakewharton:butterknife-reflect:10.2.0'
+    } else {
+        // 打包时使用编译时注解，提升 APP 运行速度
+        implementation 'com.jakewharton:butterknife:10.2.0'
+        annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+    }
+
+    // 图片加载框架：https://github.com/bumptech/glide
+    implementation ('com.github.bumptech.glide:glide:4.11.0'){
+        exclude group: "com.android.support"
+    }
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    implementation files('libs\\Msc.jar')
+    implementation files('libs\\tenjin.jar')
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'jp.wasabeef:glide-transformations:4.1.0'
+    // 状态栏沉浸：https://github.com/gyf-dev/ImmersionBar
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    // 手势 ImageView：https://github.com/chrisbanes/PhotoView
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    // ViewPager 指示器：https://github.com/romandanylyk/PageIndicatorView
+    implementation 'com.romandanylyk:pageindicatorview:1.0.3'
+    // 本地异常捕捉框架：https://github.com/Ereza/CustomActivityOnCrash
+    implementation 'cat.ereza:customactivityoncrash:2.2.0'
+    // 动画解析库：https://github.com/airbnb/lottie-android
+    // 动画资源：https://lottiefiles.com/
+    implementation 'com.airbnb.android:lottie:3.2.0'
+    // 上拉刷新下拉加载：https://github.com/scwang90/SmartRefreshLayout
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+    // SmartRefreshLayout 刷新样式集合库
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0'
+    // 侧滑框架：https://github.com/luckybilly/SmartSwipe
+    implementation 'com.billy.android:smart-swipe:1.1.2'
+    implementation 'com.billy.android:smart-swipe-x:1.1.0'
+    implementation 'org.greenrobot:eventbus:3.0.0'//eventbus事件总线
+    implementation 'com.yanzhenjie:recyclerview-swipe:1.2.0' //侧滑删除
+    implementation 'com.google.android:flexbox:2.0.1'
+    implementation 'com.makeramen:roundedimageview:2.3.0' //带圆角，边框的的ImageView
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'//ViewPager指示器
+    implementation 'com.youth.banner:banner:1.4.9'
+
+    //FlycoTabLayout
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'org.greenrobot:greendao:3.3.0' // GreenDao library
+
+    //流式布局
+    //implementation 'com.github.LillteZheng:FlowHelper:v1.22'
+    testImplementation 'junit:junit:4.12'
+
+    implementation "com.android.support:appcompat-v7:27.1.1"
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:multidex:1.0.1'
+
+    implementation 'org.litepal.android:core:1.3.1'
+    implementation 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.lzy.net:okgo:3.0.4'//OkGo 是对okHttp的封装
+    implementation 'com.alibaba:fastjson:1.1.70.android'//fastJson解析json
+    implementation 'com.github.yalantis:ucrop:2.2.2'//图片裁剪
+    implementation 'com.qiniu:qiniu-android-sdk:8.0.+'//七牛云存储
+    implementation 'top.zibin:Luban:1.1.8'//鲁班压缩图片
+    implementation 'com.androidkun:XTabLayout:1.1.5'
+    implementation 'com.alibaba:arouter-api:1.4.1'//ARouter
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.19'
+
+    //添加facebook 登录
+    implementation 'com.facebook.android:facebook-android-sdk:13.0.0'
+
+    implementation platform('com.google.firebase:firebase-bom:28.4.1')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging'
+
+    //添加google 登录
+    implementation 'com.google.firebase:firebase-auth:16.0.4'
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+
+    implementation "androidx.core:core-ktx:1.3.1"
+
+    //RecyclerView万能适配器
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
+    implementation 'com.tencent:mmkv-static:1.2.2'
+
+    //图标右上角加数字
+    implementation 'q.rorbin:badgeview:1.1.2'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    def lifecycle_version = "2.0.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+
+    //适配android 31 闪退问题
+    implementation 'androidx.work:work-runtime:2.7.1'
+    //埋点
+    implementation 'com.google.android.gms:play-services-ads-identifier:{version}'
+    implementation 'com.android.installreferrer:installreferrer:{version}'
+    implementation group: 'com.google.android.gms', name: 'play-services-ads', version: '15.0.0'
+}
+

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fitsSystemWindows="true"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:minHeight="?attr/actionBarSize" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <cc.ixcc.novelthree.treader.view.PageWidget
+            android:id="@+id/bookpage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll_status"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--android:orientation="vertical"-->
+        <!--android:visibility="invisible">-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll_top"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_below="@id/ll_status"-->
+        <!--android:visibility="gone">-->
+
+        <!--<ImageButton-->
+        <!--android:id="@+id/btn_return"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@mipmap/return_button"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_gravity="center_vertical" />-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="right"-->
+        <!--android:orientation="horizontal">-->
+        <!--<ImageButton-->
+        <!--android:id="@+id/btn_light"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:background="@color/black" />-->
+
+        <!--<ImageButton-->
+        <!--android:id="@+id/btn_listener_book"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:background="@mipmap/img_tts" />-->
+        <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/rl_read_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:visibility="gone">
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_stop_read"-->
+<!--                style="@style/setting_dialog_button"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:text="停止语音播放"-->
+<!--                android:textSize="20dp" />-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:padding="20dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="00.00%"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/bookpop_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_pre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:alpha="0.5"
+                            android:gravity="center"
+                            android:text="@string/read_setting_pre"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <SeekBar
+                            android:id="@+id/sb_progress"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:max="10000"
+                            android:maxHeight="3dp"
+                            android:minHeight="3dp"
+                            android:progressDrawable="@drawable/bg_adjust_seek_bar"
+                            android:splitTrack="false"
+                            android:thumb="@drawable/seek_button"></SeekBar>
+
+                        <TextView
+                            android:id="@+id/tv_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/read_setting_next"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_directory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@mipmap/icon_mulu"
+                            android:drawablePadding="8dp"
+                            android:gravity="center"
+                            android:text="@string/read_setting_directory"
+                            android:textColor="#ff303133"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_dayornight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@mipmap/icon_heiye"
+                            android:drawablePadding="8dp"
+                            android:gravity="center"
+                            android:text="@string/read_setting_night"
+                            android:textColor="#ff303133"
+                            android:textSize="12sp" />
+
+                        <!--                    <TextView-->
+                        <!--                        style="@style/text_style"-->
+                        <!--                        android:id="@+id/tv_pagemode"-->
+                        <!--                        android:layout_width="wrap_content"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:layout_weight="1"-->
+                        <!--                        android:drawableTop="@mipmap/pagemode"-->
+                        <!--                        android:gravity="center"-->
+                        <!--                        android:text="@string/read_setting_pagemode" />-->
+                        <TextView
+                            android:id="@+id/tv_pagemode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@mipmap/icon_light"
+                            android:drawablePadding="8dp"
+                            android:gravity="center"
+                            android:text="@string/read_light"
+                            android:textColor="#ff303133"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_setting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@mipmap/icon_shape"
+                            android:drawablePadding="8dp"
+                            android:gravity="center"
+                            android:text="@string/read_setting_set"
+                            android:textColor="#ff303133"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white">
+
+        <include layout="@layout/book_directory_include" />
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

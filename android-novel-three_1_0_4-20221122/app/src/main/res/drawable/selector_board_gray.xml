@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 默认圆角按钮样式 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    &lt;!&ndash; 禁用状态 &ndash;&gt;-->
+<!--    <item android:state_enabled="false">-->
+<!--        <shape android:shape="rectangle">-->
+<!--            <stroke android:width="0.5dp" android:color="@color/colorLine" />-->
+<!--            <corners android:radius="5dp" />-->
+<!--        </shape>-->
+<!--    </item>-->
+
+<!--    <item android:state_enabled="true">-->
+<!--        <shape android:shape="rectangle">-->
+<!--            <stroke android:width="0.5dp" android:color="@color/colorButtonPressed" />-->
+<!--            <corners android:radius="5dp" />-->
+<!--        </shape>-->
+<!--    </item>-->
+
+    <!-- 按压状态 -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <stroke android:width="0.5dp" android:color="@color/colorButtonPressed" />
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
+
+    <!-- 焦点状态 -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <stroke android:width="0.5dp" android:color="@color/colorButtonPressed" />
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
+
+    <!-- 默认状态 -->
+    <item>
+        <shape android:shape="rectangle">
+            <stroke android:width="0.5dp" android:color="@color/colorLine" />
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
+
+</selector>

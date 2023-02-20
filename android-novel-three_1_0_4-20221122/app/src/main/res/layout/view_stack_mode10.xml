@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/mode10_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dove Novel Best"
+            android:drawableLeft="@mipmap/shujia"
+            android:drawablePadding="5dp"
+            android:textColor="#ff0a1c33"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/mode10_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:drawableRight="@mipmap/more_icon"
+            android:drawablePadding="2dp"
+            android:text="More"
+            android:textColor="#ff0a1c33"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <com.jiusen.widget.layout.WrapRecyclerView
+        android:id="@+id/rv_hot_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-10dp"
+        />
+
+</LinearLayout>

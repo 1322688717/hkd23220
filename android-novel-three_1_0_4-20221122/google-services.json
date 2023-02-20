@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "663307209999",
+    "project_id": "axial-crane-326306",
+    "storage_bucket": "axial-crane-326306.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663307209999:android:4a1decfc723bcd71f1c27a",
+        "android_client_info": {
+          "package_name": "com.haiwai.xiaosuobook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663307209999-2c0h86iehlictc2ti00ku9omkmoo5up8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.haiwai.xiaosuobook",
+            "certificate_hash": "d8db525cb15bafad481f592467b6107f8d56a17b"
+          }
+        },
+        {
+          "client_id": "663307209999-7gcs57nndptjtr4ukctp8mflv01gt1i4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4oecm8SI0CtU-oRRSmKML4qhEemvnovo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663307209999-7gcs57nndptjtr4ukctp8mflv01gt1i4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

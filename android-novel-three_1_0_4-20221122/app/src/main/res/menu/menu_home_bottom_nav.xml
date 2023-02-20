@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_shelve"
+        android:icon="@drawable/selector_home_shelve"
+        android:title="@string/home_nav_shelve"
+        />
+    <item
+        android:id="@+id/menu_stack"
+        android:icon="@drawable/selector_home_stack"
+        android:title="@string/home_nav_stack"
+        />
+   <!-- <item
+        android:id="@+id/menu_fuli"
+        android:icon="@drawable/selector_home_fuli"
+        android:title="Welfare"/> -->
+    <item
+        android:id="@+id/menu_mine"
+        android:icon="@drawable/selector_home_mine"
+        android:title="@string/home_nav_mine"/>
+</menu>

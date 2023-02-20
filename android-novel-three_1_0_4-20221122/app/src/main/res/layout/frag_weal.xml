@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/huodong"
+    android:orientation="vertical"
+    tools:layoutAnimation="@null">
+
+    <com.jiusen.base.views.MyReboundScrollView
+        android:id="@+id/reboundscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:background="@mipmap/bg_weal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bg_conner_white2"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="50dp"
+                        android:paddingBottom="50dp">
+
+                        <TextView
+                            android:id="@+id/day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="&#8194;&#8194;"
+                            android:textColor="#fdce91"
+                            android:textSize="45sp"
+                            tools:text="00" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="9dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/week"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="&#8194;&#8194;&#8194;&#8194;"
+                                android:textColor="#fdce91"
+                                android:textSize="18sp"
+                                tools:text="周三" />
+
+                            <TextView
+                                android:id="@+id/date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="&#8195;&#8195;&#8194;&#8194;&#8194;&#8194;&#8194;"
+                                android:textColor="#fdce91"
+                                android:textSize="12sp"
+                                tools:text="三月 2019" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mytop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="60dp">
+
+                <TextView
+                    android:id="@+id/btn_return"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@mipmap/left_icon_jiantou"
+                    android:gravity="left"
+                    android:textColor="#ffffffff"
+                    android:textSize="20sp"
+                    android:visibility="visible"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-27dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Earn Rewards"
+                    android:textColor="#ffffffff"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/coin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_rewards"
+                    android:drawablePadding="4dp"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    tools:text="1,000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:text="MyCoins"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+                <!--android:background="@drawable/bg_conner_white_light" -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sign_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mytop"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/bg_pakage_hd"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="15dp"
+                    android:text="Daily Check-in"
+                    android:textColor="#ff39383d"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_sign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/sign"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/rv_sign"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="18dp"
+                    android:background="@drawable/btn_with"
+                    android:gravity="center"
+                    android:text="Check in"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    />
+
+                <TextView
+                    android:id="@+id/sign2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/rv_sign"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="18dp"
+                    android:background="@drawable/btn_with_gray"
+                    android:gravity="center"
+                    android:text="Sign in for 7 days this week to receive"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/info"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sign_box"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign in for 7 days this week to receive "
+                    android:textColor="#ffbfc2cc"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/coin_most"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#eb515d"
+                    android:textSize="12sp"
+                    tools:text=" 1,000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_song"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/info"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="20dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_song"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+
+
+            <!-- 基础任务 -->
+            <RelativeLayout
+                android:id="@+id/vr_basic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv_Tasks"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_pakage_hd">
+
+                <RelativeLayout
+                    android:id="@+id/Basic_Task_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Basic Task"
+                        android:textColor="#ff0a1c33"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/Basic_Task"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Basic_Task_Title"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp" />
+
+            </RelativeLayout>
+
+            <!-- 新手任务 -->
+            <LinearLayout
+                android:id="@+id/Novice_Task_Bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vr_basic"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_pakage_hd"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/Novice_Task_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Novice Task"
+                        android:textColor="#ff0a1c33"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/Novice_Task"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Novice_Task_Title"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp" />
+            </LinearLayout>
+
+            <!--banner运营位-->
+            <LinearLayout
+                android:id="@+id/ll_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_song"
+                android:visibility="gone"
+                >
+
+                <com.youth.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+            <!-- 书籍阅读活动 -->
+            <LinearLayout
+                android:id="@+id/rv_r"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_banner"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/bg_pakage_hd"
+                android:orientation="vertical"
+                android:paddingBottom="2dp">
+
+                <RelativeLayout
+                    android:id="@+id/read_weal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reading Tasks"
+                        android:textColor="#ff39383d"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="Today’s reading: 10 Minutes"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="10dp" />
+            </LinearLayout>
+
+
+            <!-- 日常任务 -->
+            <LinearLayout
+                android:id="@+id/rv_Tasks"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/rv_r"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/bg_pakage_hd"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/Daily_Tasks_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Daily Tasks"
+                        android:textColor="#ff0a1c33"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/Daily_Tasks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Daily_Tasks_Title"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </com.jiusen.base.views.MyReboundScrollView>
+
+    <TextView
+        android:id="@+id/titletext"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:alpha="0"
+        android:background="#ffffff"
+        android:gravity="center_horizontal"
+        android:paddingTop="30dp"
+        android:text="Earn Rewards"
+        android:textColor="#39383d"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:textStyle="bold" />
+</RelativeLayout>

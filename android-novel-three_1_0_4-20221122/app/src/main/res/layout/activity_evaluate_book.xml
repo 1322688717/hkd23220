@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context="cc.ixcc.novelthree.ui.activity.my.EvaluateBookActivity">
+
+
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:rightColor="@color/colorButtonPressed"
+        app:rightSize="15sp"
+        app:rightTitle="OK"
+        app:title="Book evaluation"
+        app:titleColor="@color/books_name"
+        app:titleSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/book_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="10.0"
+        android:textColor="@color/books_pingfen_book"
+        android:textSize="15sp" />
+
+    <cc.ixcc.novelthree.utils.StarBar
+        android:id="@+id/starBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        ratingbar:starCount="5"
+        ratingbar:starDistance="10dp"
+        ratingbar:starEmpty="@drawable/stars_icon_50"
+        ratingbar:starFill="@drawable/stars_icon"
+        ratingbar:starSize="20dp" />
+
+
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_bookpl"
+        android:gravity="start"
+        android:hint="Please rate and express your opinion in terms of storyline, character, etc. (within 800 words)"
+        android:padding="20dp"
+        android:textSize="14sp" />
+</LinearLayout>

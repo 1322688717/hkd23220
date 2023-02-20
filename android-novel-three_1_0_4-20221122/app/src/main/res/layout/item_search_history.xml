@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="17dp"
+    android:layout_marginBottom="15dp"
+    android:background="@drawable/bg_conner_gray"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="17dp"
+    android:paddingTop="8dp"
+    android:paddingRight="17dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxEms="8"
+        android:maxLines="1"
+        android:text="CEO"
+        android:textColor="@color/books_name"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/img_hot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:src="@mipmap/hot_icon" />
+</LinearLayout>

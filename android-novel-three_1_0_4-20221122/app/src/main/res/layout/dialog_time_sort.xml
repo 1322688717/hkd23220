@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:layout_gravity="bottom">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_conner_white3"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/time_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="17dp"
+            android:paddingBottom="17dp"
+            android:text="Update time priority"
+            android:gravity="center"
+            android:textColor="#ff0a1c33"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/time_read"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reading time first"
+            android:textColor="#ff0a1c33"
+            android:paddingTop="16dp"
+            android:paddingBottom="20dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Cancel"
+        android:background="#ffffff"
+        android:textColor="#ff0a1c33"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        />
+</LinearLayout>

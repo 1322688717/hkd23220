@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ScrollRefreshLayout">
+        <attr name="layout_scroll_empty" format="reference"/>
+        <attr name="text_error_tip" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="RefreshLayout">
+        <attr name="layout_refresh_empty" format="reference"/>
+        <attr name="layout_refresh_error" format="reference"/>
+        <attr name="layout_refresh_loading" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="BookTextView">
+        <attr name="bookColor" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="EasyRatingBar">
+        <attr name="rateNum" format="integer"/>
+        <attr name="rating" format="integer"/>
+        <attr name="rateNormal" format="reference"/>
+        <attr name="rateSelect" format="reference"/>
+        <attr name="rateInterval" format="dimension"/>
+        <attr name="isIndicator" format="boolean"/>
+    </declare-styleable>
+    <!-- 进度条 -->
+    <declare-styleable name="ProgressView">
+        <attr name="progressIndeterminate" format="boolean" />
+        <attr name="barColor" format="color" />
+        <attr name="rimColor" format="color" />
+        <attr name="rimWidth" format="dimension" />
+        <attr name="spinSpeed" format="float" />
+        <attr name="barSpinCycleTime" format="integer" />
+        <attr name="circleRadius" format="dimension" />
+        <attr name="fillRadius" format="boolean" />
+        <attr name="barWidth" format="dimension" />
+        <attr name="linearProgress" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RatingBar">
+        <!--星星间距-->
+        <attr name="starDistance" format="dimension" />
+        <!--星星大小-->
+        <attr name="starSize" format="dimension" />
+        <!--星星个数-->
+        <attr name="starCount" format="integer" />
+
+        <!--是否可以点击-->
+        <attr name="isSelection" format="integer" />
+        <!--星星空图-->
+        <attr name="starEmpty" format="reference" />
+        <!--星星满图-->
+        <attr name="starFill" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="CommonRefreshView">
+        <attr name="crv_refreshEnable" format="boolean" />
+        <attr name="crv_loadMoreEnable" format="boolean" />
+        <attr name="crv_emptyEnable" format="boolean" />
+        <attr name="crv_layout" format="reference" />
+        <attr name="crv_itemCount" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="PileLayout">
+        <attr name="PileLayout_vertivalSpace" format="dimension"/>
+        <attr name="PileLayout_pileWidth" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="CountDownView">
+
+        <!--颜色-->
+
+        <attr name="ringColor" format="color" />
+
+        <!-- 进度文本的字体大小 -->
+
+        <attr name="progressTextSize" format="dimension" />
+
+        <!-- 圆环宽度 -->
+
+        <attr name="ringWidth" format="float" />
+
+        <!--进度文本颜色-->
+
+        <attr name="progressTextColor" format="color"/>
+
+        <!--倒计时-->
+
+        <attr name="countdownTime" format="integer"/>
+
+    </declare-styleable>
+
+</resources>

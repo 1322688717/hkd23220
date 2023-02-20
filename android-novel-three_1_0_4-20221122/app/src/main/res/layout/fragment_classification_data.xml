@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cc.ixcc.novelthree.ui.fragment.myFragment.ClassificationDataFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlv_title"
+        android:layout_width="0dp"
+        android:background="@color/classfication_bg"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlTextFailed="@string/refresh_header_failed"
+                app:srlTextFinish="@string/refresh_header_finish"
+                app:srlTextLoading="@string/refresh_header_loading"
+                app:srlTextPulling="@string/refresh_header_pulling"
+                app:srlTextRefreshing="@string/refresh_header_refreshing"
+                app:srlTextRelease="@string/refresh_header_release"
+                app:srlTextUpdate="@string/refresh_header_update" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rlv_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlTextFailed="@string/refresh_footer_failed"
+                app:srlTextFinish="@string/refresh_footer_finish"
+                app:srlTextLoading="@string/refresh_footer_loading"
+                app:srlTextNothing="@string/refresh_footer_nothing"
+                app:srlTextPulling="@string/refresh_footer_pulling"
+                app:srlTextRefreshing="@string/refresh_footer_refreshing"
+                app:srlTextRelease="@string/refresh_footer_release" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

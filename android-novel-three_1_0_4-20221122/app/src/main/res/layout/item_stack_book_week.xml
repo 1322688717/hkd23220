@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/transparent"
+    android:paddingBottom="10dp"
+    android:orientation="vertical">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="5dp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Mrs.Hawn, Your Disguise was Penetrated"
+        android:textColor="@color/books_name"
+        android:textSize="13sp"
+        />
+
+    <TextView
+        android:id="@+id/tvVip"
+        android:background="@drawable/bg_book_vip"
+        android:text="VIP"
+        android:gravity="center"
+        android:textSize="@dimen/tvVipSize"
+        android:textStyle="italic|bold"
+        android:visibility="gone"
+        android:textColor="@color/ColorBookVip"
+        android:layout_width="27dp"
+        android:layout_height="14dp"/>
+
+    <LinearLayout
+        android:id="@+id/pingfenbg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_conner_yellow"
+        android:paddingLeft="4dp"
+        android:paddingTop="1dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="1dp">
+
+        <TextView
+            android:id="@+id/pingfen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8.3"
+            android:textColor="#ffffffff"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/fen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/name"
+            android:layout_alignParentRight="true"
+            android:text=" "
+            android:textColor="#ffffffff"
+            android:textSize="10sp" />
+    </LinearLayout>
+</RelativeLayout>

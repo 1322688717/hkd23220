@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">>
+    <item
+        android:id="@+id/action_shelve"
+        android:title="@string/action_add_bookmark"
+        android:orderInCategory="90"
+        android:icon="@mipmap/icon_add_sj"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_read_book2"
+        android:title="@string/action_read_book"
+        android:orderInCategory="90"
+        android:icon="@mipmap/icon_share"
+        app:showAsAction="ifRoom" />
+</menu>

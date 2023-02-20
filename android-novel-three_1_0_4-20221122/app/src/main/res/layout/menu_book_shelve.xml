@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="0px">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/read_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/read_record"
+            android:drawablePadding="6dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="16dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="8dp"
+            android:text="Reading record"
+            android:textColor="#ff606266"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/arrange_shelf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/arrange_shelf"
+            android:drawablePadding="6dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="8dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="8dp"
+            android:text="Organize the bookshelf"
+            android:textColor="#ff606266"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/book_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/book_range"
+            android:drawablePadding="6dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="8dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="16dp"
+            android:text="Book sorting"
+            android:textColor="#ff606266"
+            android:textSize="14sp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

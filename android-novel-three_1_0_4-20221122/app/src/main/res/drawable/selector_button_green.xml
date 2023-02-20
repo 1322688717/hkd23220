@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 白色背景按压效果样式 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    &lt;!&ndash; 按压状态 &ndash;&gt;-->
+<!--    <item android:drawable="@color/black5" android:state_pressed="true" />-->
+
+<!--    &lt;!&ndash; 选中状态 &ndash;&gt;-->
+<!--    <item android:drawable="@color/black5" android:state_selected="true" />-->
+
+<!--    &lt;!&ndash; 焦点状态 &ndash;&gt;-->
+<!--    <item android:drawable="@color/black5" android:state_focused="true" />-->
+
+    <item android:state_pressed="true" android:state_focused="true" android:state_selected="true" >
+        <shape android:shape="rectangle">
+            <solid android:color="@color/colorButtonPressed" />
+            <corners android:topLeftRadius="22dp" android:topRightRadius="22dp" android:bottomLeftRadius="22dp" android:bottomRightRadius="22dp" />
+        </shape>
+    </item>
+
+    <!-- 默认状态 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/colorButtonDefault" />
+            <corners android:topLeftRadius="22dp" android:topRightRadius="22dp" android:bottomLeftRadius="22dp" android:bottomRightRadius="22dp" />
+        </shape>
+    </item>
+
+</selector>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="12dp"
+    android:paddingTop="10dp"
+    android:paddingRight="11dp">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="36"
+        android:textColor="#ff0a1b33"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/time"
+        android:layout_toRightOf="@id/time"
+        android:text="Minute"
+        android:textColor="#ff5f6165"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time"
+        android:layout_marginTop="6dp"
+        android:text="Today's"
+        android:textColor="#ff5f6165"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bg_conner_blue"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingTop="9dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="9dp">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/icon_sign" />
+
+        <TextView
+            android:id="@+id/sign_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="sing "
+            android:textColor="#ffffffff"
+            android:textSize="13sp" />
+    </LinearLayout>
+</RelativeLayout>

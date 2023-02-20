@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context="cc.ixcc.novelthree.ui.activity.my.BookDetailActivity">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/title"
+        style="@style/TitleBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Contents"
+        app:rightIcon="@mipmap/icon_sort1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="In serial"
+            android:textColor="@color/books_name"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/chapter_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:layout_toRightOf="@id/type"
+            android:text="100 chapters in total"
+            android:textColor="@color/settings_title"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <com.jiusen.widget.layout.WrapRecyclerView
+        android:id="@+id/rv_directory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

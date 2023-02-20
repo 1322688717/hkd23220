@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="cc.ixcc.novelthree.ui.activity.my.BookPlListActivity">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Comment"
+        app:titleColor="#0A1C33"
+        android:layout_marginTop="-20dp"
+        app:titleSize="18sp" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/comment"
+        android:layout_below="@id/title">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp">
+            <!--            app:elevation="0dp"-->
+            <!--            app:layout_behavior="cc.ixcc.novelthree.utils.AppBarLayoutBehavior">-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/books_comment_book">
+
+                    <ImageView
+                        android:id="@+id/book_img"
+                        android:layout_width="60dp"
+                        android:layout_height="70dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp" />
+
+                    <TextView
+                        android:id="@+id/book_name"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="17dp"
+                        android:layout_toRightOf="@+id/book_img"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textColor="@color/books_name"
+                        android:textSize="18sp"
+                        tools:text="Domineering Billionaire Husband: Please Love Me Gently" />
+
+                    <TextView
+                        android:id="@+id/go_read"
+                        android:layout_width="60dp"
+                        android:layout_height="22dp"
+                        android:layout_below="@+id/book_name"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_toRightOf="@+id/book_img"
+                        android:background="@drawable/book_listbg"
+                        android:gravity="center"
+                        android:text="免费阅读"
+                        android:textColor="#eb515d"
+                        android:textSize="11sp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="7dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/book_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="10.0"
+                            android:textColor="@color/books_pingfen_book"
+                            android:textSize="15sp" />
+
+                        <cc.ixcc.novelthree.utils.StarBar
+                            android:id="@+id/starBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="6dp"
+                            ratingbar:isSelection="2"
+                            ratingbar:starCount="5"
+                            ratingbar:starDistance="2dp"
+                            ratingbar:starEmpty="@drawable/stars_icon_50"
+                            ratingbar:starFill="@drawable/stars_icon"
+                            ratingbar:starSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="3dp"
+                            android:text="0 reviews"
+                            android:textColor="#ffbfc2cc"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tj_pl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Praise"
+                        android:textColor="@color/books_name"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/new_pl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Latest book reviews"
+                        android:textColor="@color/settings_title"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_pllist"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp" />
+                </RelativeLayout>
+
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/comment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@mipmap/icon_liuyan"
+            android:drawablePadding="5dp"
+            android:text="Write Comments"
+            android:textColor="@color/colorButtonPressed"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</RelativeLayout>

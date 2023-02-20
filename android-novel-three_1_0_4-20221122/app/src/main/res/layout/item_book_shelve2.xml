@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="20dp">
+
+    <LinearLayout
+        android:id="@+id/book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+            <TextView
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/tvVip"
+                android:layout_marginLeft="13dp"
+                android:background="@drawable/bg_book_vip"
+                android:text="VIP"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textSize="@dimen/tvVipSize"
+                android:textStyle="italic|bold"
+                android:textColor="@color/ColorBookVip"
+                android:layout_width="27dp"
+                android:layout_height="14dp"/>
+            <LinearLayout
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/ll_book"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp"
+                android:paddingRight="8dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/book_img"
+                    android:layout_width="50dp"
+                    app:riv_corner_radius="5dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/book_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="The Alpha King's Lust"
+                        android:textColor="@color/books_name"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:visibility="gone"
+                        android:text="Jk Bartolome"
+                        android:textColor="@color/books_name"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true">
+
+                        <TextView
+                            android:id="@+id/read_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="155/1800"
+                            android:textColor="@color/settings_title"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/read_status_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="他与奶茶"
+                            android:visibility="gone"
+                            android:textColor="#ff8f9399"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:drawableRight="@drawable/bg_shelve_check2"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:padding="10dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_conner_gray2"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
+
+        <ImageView
+            android:id="@+id/img_add"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/icon_bookshelf_add" />
+    </LinearLayout>
+
+</LinearLayout>

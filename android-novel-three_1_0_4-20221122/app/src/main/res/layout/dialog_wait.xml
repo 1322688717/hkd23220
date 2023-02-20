@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#0000"
+    tools:context="cc.ixcc.novelthree.ui.dialog.WaitDialog">
+<!--    app:cardBackgroundColor="@color/black85"-->
+<!--    app:cardCornerRadius="15dp"-->
+<!--    app:cardElevation="0px"-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minWidth="110dp"
+        android:minHeight="110dp"
+        android:background="#0000"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <cc.ixcc.novelthree.widget.ProgressView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#0000"
+            app:barWidth="2dp"
+            app:fillRadius="false"
+            app:barColor="@color/colorProgress"
+            app:linearProgress="true"
+            app:progressIndeterminate="true" />
+<!--        app:barColor="@android:color/white"-->
+
+
+        <com.jiusen.widget.view.SmartTextView
+            android:id="@+id/tv_wait_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="16dp"
+            android:maxLines="3"
+            android:text="@string/common_loading"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+<!--        android:textColor="@color/white"-->
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
