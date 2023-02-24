@@ -41,7 +41,7 @@ android {
         //buildConfigField("String", "host", "\"https://apius.wykcshi.com/\"")
 
         //
-        buildConfigField("String", "host", "\"https://api.sjapp51.com/\"")
+        buildConfigField("String", "host", "\"http://www.wolfnovels.com/\"")
 
 
         resValue('string', 'file_provider', 'cc.ixcc.novelthree.provider')

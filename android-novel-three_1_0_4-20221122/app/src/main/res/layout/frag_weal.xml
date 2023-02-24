@@ -244,88 +244,88 @@
 
 
             <!-- 基础任务 -->
-            <RelativeLayout
-                android:id="@+id/vr_basic"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/rv_Tasks"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/bg_pakage_hd">
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/vr_basic"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/rv_Tasks"-->
+<!--                android:layout_marginLeft="15dp"-->
+<!--                android:layout_marginRight="15dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@drawable/bg_pakage_hd">-->
 
-                <RelativeLayout
-                    android:id="@+id/Basic_Task_Title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="15dp"
-                    android:paddingTop="16dp"
-                    android:paddingRight="15dp"
-                    android:paddingBottom="16dp">
+<!--                <RelativeLayout-->
+<!--                    android:id="@+id/Basic_Task_Title"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingLeft="15dp"-->
+<!--                    android:paddingTop="16dp"-->
+<!--                    android:paddingRight="15dp"-->
+<!--                    android:paddingBottom="16dp">-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Basic Task"
-                        android:textColor="#ff0a1c33"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Basic Task"-->
+<!--                        android:textColor="#ff0a1c33"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
 
-                </RelativeLayout>
+<!--                </RelativeLayout>-->
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/Basic_Task"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/Basic_Task_Title"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="4dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="10dp" />
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/Basic_Task"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/Basic_Task_Title"-->
+<!--                    android:paddingLeft="10dp"-->
+<!--                    android:paddingTop="4dp"-->
+<!--                    android:paddingRight="10dp"-->
+<!--                    android:paddingBottom="10dp" />-->
 
-            </RelativeLayout>
+<!--            </RelativeLayout>-->
 
             <!-- 新手任务 -->
-            <LinearLayout
-                android:id="@+id/Novice_Task_Bg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/vr_basic"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/bg_pakage_hd"
-                android:orientation="vertical">
+<!--            <LinearLayout-->
+<!--                android:id="@+id/Novice_Task_Bg"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/vr_basic"-->
+<!--                android:layout_marginLeft="15dp"-->
+<!--                android:layout_marginRight="15dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginBottom="20dp"-->
+<!--                android:background="@drawable/bg_pakage_hd"-->
+<!--                android:orientation="vertical">-->
 
-                <RelativeLayout
-                    android:id="@+id/Novice_Task_Title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="15dp"
-                    android:paddingTop="16dp"
-                    android:paddingRight="15dp"
-                    android:paddingBottom="16dp">
+<!--                <RelativeLayout-->
+<!--                    android:id="@+id/Novice_Task_Title"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingLeft="15dp"-->
+<!--                    android:paddingTop="16dp"-->
+<!--                    android:paddingRight="15dp"-->
+<!--                    android:paddingBottom="16dp">-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Novice Task"
-                        android:textColor="#ff0a1c33"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Novice Task"-->
+<!--                        android:textColor="#ff0a1c33"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+<!--                </RelativeLayout>-->
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/Novice_Task"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/Novice_Task_Title"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="4dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="10dp" />
-            </LinearLayout>
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/Novice_Task"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/Novice_Task_Title"-->
+<!--                    android:paddingLeft="10dp"-->
+<!--                    android:paddingTop="4dp"-->
+<!--                    android:paddingRight="10dp"-->
+<!--                    android:paddingBottom="10dp" />-->
+<!--            </LinearLayout>-->
 
             <!--banner运营位-->
             <LinearLayout
@@ -399,47 +399,47 @@
             </LinearLayout>
 
 
-            <!-- 日常任务 -->
-            <LinearLayout
-                android:id="@+id/rv_Tasks"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/rv_r"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/bg_pakage_hd"
-                android:orientation="vertical"
-                >
+<!--            &lt;!&ndash; 日常任务 &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/rv_Tasks"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_below="@id/ll_banner"-->
+<!--                android:layout_marginLeft="15dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginRight="15dp"-->
+<!--                android:background="@drawable/bg_pakage_hd"-->
+<!--                android:orientation="vertical"-->
+<!--                >-->
 
-                <RelativeLayout
-                    android:id="@+id/Daily_Tasks_Title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="15dp"
-                    android:paddingTop="16dp"
-                    android:paddingRight="15dp"
-                    android:paddingBottom="16dp">
+<!--                <RelativeLayout-->
+<!--                    android:id="@+id/Daily_Tasks_Title"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingLeft="15dp"-->
+<!--                    android:paddingTop="16dp"-->
+<!--                    android:paddingRight="15dp"-->
+<!--                    android:paddingBottom="16dp">-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Daily Tasks"
-                        android:textColor="#ff0a1c33"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Daily Tasks"-->
+<!--                        android:textColor="#ff0a1c33"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+<!--                </RelativeLayout>-->
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/Daily_Tasks"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/Daily_Tasks_Title"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="4dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="10dp" />
-            </LinearLayout>
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/Daily_Tasks"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/Daily_Tasks_Title"-->
+<!--                    android:paddingLeft="10dp"-->
+<!--                    android:paddingTop="4dp"-->
+<!--                    android:paddingRight="10dp"-->
+<!--                    android:paddingBottom="10dp" />-->
+<!--            </LinearLayout>-->
 
         </RelativeLayout>
     </com.jiusen.base.views.MyReboundScrollView>

@@ -121,7 +121,7 @@ public class BookMoreFragment extends MyFragment<HomeActivity> {
 
     private void getInfo() {
         HttpClient.getInstance().get(AllApi.getbookmore, AllApi.getbookmore)
-            .params("column_id", id)
+            .params("channel_id", id)
             .params("type", type)
             .params("page", page)
             .params("page_size", PAGE_SIZE)

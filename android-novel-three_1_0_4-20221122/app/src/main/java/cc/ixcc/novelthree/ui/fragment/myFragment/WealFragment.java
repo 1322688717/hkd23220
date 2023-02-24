@@ -86,22 +86,22 @@ WealFragment extends MyFragment<HomeActivity> implements View.OnClickListener {
     @BindView(R.id.time)
     TextView time;
     //基础任务 Basic_Task
-    @BindView(R.id.Basic_Task)
-    RecyclerView rvBasicTask;
-    //新手任务
-    @BindView(R.id.Novice_Task_Bg)
-    LinearLayout Novice_Task_Bg;
-    @BindView(R.id.Novice_Task)
-    RecyclerView rvNoviceTask;
-    @BindView(R.id.Novice_Task_Title)
-    RelativeLayout Novice_Title;
-    //日常任务
-    @BindView(R.id.rv_Tasks)
-    LinearLayout rv_Tasks;
-    @BindView(R.id.Daily_Tasks)
-    RecyclerView rvDayTasks;
-    @BindView(R.id.Daily_Tasks_Title)
-    RelativeLayout Day_Title;
+//    @BindView(R.id.Basic_Task)
+//    RecyclerView rvBasicTask;
+//    //新手任务
+//    @BindView(R.id.Novice_Task_Bg)
+//    LinearLayout Novice_Task_Bg;
+//    @BindView(R.id.Novice_Task)
+//    RecyclerView rvNoviceTask;
+//    @BindView(R.id.Novice_Task_Title)
+//    RelativeLayout Novice_Title;
+//    //日常任务
+//    @BindView(R.id.rv_Tasks)
+//    LinearLayout rv_Tasks;
+//    @BindView(R.id.Daily_Tasks)
+//    RecyclerView rvDayTasks;
+//    @BindView(R.id.Daily_Tasks_Title)
+//    RelativeLayout Day_Title;
     //每日阅读任务
     @BindView(R.id.rv_record)
     RecyclerView rvRecord;
@@ -345,16 +345,16 @@ WealFragment extends MyFragment<HomeActivity> implements View.OnClickListener {
 
         //日常任务
         if (wealBean.getDayConfig().size() == 0) {
-            rv_Tasks.setVisibility(View.GONE);
-            rvDayTasks.setVisibility(View.GONE);
-            Day_Title.setVisibility(View.GONE);
+          //  rv_Tasks.setVisibility(View.GONE);
+           // rvDayTasks.setVisibility(View.GONE);
+           // Day_Title.setVisibility(View.GONE);
         }
 
         //新手任务
         if (wealBean.getNoviceConfig().size() == 0) {
-            Novice_Task_Bg.setVisibility(View.GONE);
-            rvNoviceTask.setVisibility(View.GONE);
-            Novice_Title.setVisibility(View.GONE);
+//            Novice_Task_Bg.setVisibility(View.GONE);
+//            rvNoviceTask.setVisibility(View.GONE);
+//            Novice_Title.setVisibility(View.GONE);
         }
 
         for (int i = 0; i < wealBean.getSign_config().size(); i++) {
@@ -394,7 +394,9 @@ WealFragment extends MyFragment<HomeActivity> implements View.OnClickListener {
     @Override
     public void onResume() {
         super.onResume();
-        if (!isVisibleToUser) return;
+        if (!isVisibleToUser) {
+            return;
+        }
         getInfo();
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -442,8 +444,8 @@ WealFragment extends MyFragment<HomeActivity> implements View.OnClickListener {
 
         //基础任务
         mBasicTaskAdapter = new TaskBasicAdapter(getContext());
-        rvBasicTask.setAdapter(mBasicTaskAdapter);
-        rvBasicTask.setNestedScrollingEnabled(false);
+//        rvBasicTask.setAdapter(mBasicTaskAdapter);
+//        rvBasicTask.setNestedScrollingEnabled(false);
 
         final EmailDataDialog dialog = EmailDataDialog.getMyDialog(this.getActivity());
         dialog.setMessage(AppContext.Emailmsg);
@@ -485,8 +487,8 @@ WealFragment extends MyFragment<HomeActivity> implements View.OnClickListener {
 
         //新手任务
         mNoviceTaskAdapter = new TaskNoviceAdapter(getContext());
-        rvNoviceTask.setAdapter(mNoviceTaskAdapter);
-        rvNoviceTask.setNestedScrollingEnabled(false);
+//        rvNoviceTask.setAdapter(mNoviceTaskAdapter);
+//        rvNoviceTask.setNestedScrollingEnabled(false);
         mNoviceTaskAdapter.setOnClickListener(new TaskNoviceAdapter.OnClickListener() {
             @Override
             public void onJump(WealBean.NoviceConfigBean bean) {
@@ -505,8 +507,8 @@ WealFragment extends MyFragment<HomeActivity> implements View.OnClickListener {
 
         //日常任务
         mDayAdapter = new TaskDayAdapter(getContext());
-        rvDayTasks.setAdapter(mDayAdapter);
-        rvDayTasks.setNestedScrollingEnabled(false);
+//        rvDayTasks.setAdapter(mDayAdapter);
+//        rvDayTasks.setNestedScrollingEnabled(false);
         mDayAdapter.setOnClickListener(new TaskDayAdapter.OnClickListener() {
             @Override
             public void onJump(WealBean.DayConfigBean bean) {

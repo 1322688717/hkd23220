@@ -85,11 +85,11 @@ public final class TopUpActivity extends MyActivity implements KeyboardWatcher.S
     @BindView(R.id.add_book)
     TextView money;
 
-    @BindView(R.id.banner)
-    Banner banner;
+//    @BindView(R.id.banner)
+//    Banner banner;
 
-    @BindView(R.id.banner2)
-    ViewPager2 pager2;
+//    @BindView(R.id.banner2)
+//    ViewPager2 pager2;
 
     BuyCoinAdapter adapter;
     int type = 0;
@@ -129,173 +129,173 @@ public final class TopUpActivity extends MyActivity implements KeyboardWatcher.S
         initCoinRv();
         getInfo();
         //setcustomerserviceText();
-        initBanner();
+       // initBanner();
     }
 
     //初始化banner运营位
-    public void initBanner() {
-        try {
-            if (!HomeActivity.mHomeActivity.IsPostNotice) {
-                HomeActivity.mHomeActivity.GetActiviyNoticeMsg(() -> {
-                    ShowBanner(HomeActivity.mHomeActivity);
-                });
-            } else {
-                ShowBanner(HomeActivity.mHomeActivity);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
-    public void updateCopyright(String envent) {
-//        Log.e("EventBus", "BookShelveFragment--Copyright接受数据" + envent);
-        if (envent.equals("-1")) {
-            banner.setVisibility(View.VISIBLE);
-        } else {
-            banner.setVisibility(View.GONE);
-        }
-    }
-    public void ShowBanner(HomeActivity mHomeActivity) {
-        //如果有运营位则显示 没有则隐藏
-        if (mHomeActivity.adList_topUp.size() > 0) {
-            List<ActiviyNoticeInfo> list = mHomeActivity.adList_topUp;
-            ActiviyNoticeInfo discount = null;
-            List<ActiviyNoticeInfo> unDiscount = null;
-            try {
-                List<ActiviyNoticeInfo> count = list.stream().filter(s -> s.getType() == 17).collect(Collectors.toList());
-                unDiscount = list.stream().filter(s -> s.getType() != 17).collect(Collectors.toList());
-//                for (int i = 0; i < unDiscount.size(); i++) {
-//                    fragments.add(new CountTimerFragment(unDiscount.get(i).getUrl(), mHomeActivity.adList_topUp.get(i).getType()));
-//                }
-                int flag = new Random().nextInt(count.size());
-                discount = count.get(flag);
-                fragments.add(new CountTimerFragment(discount, unDiscount.get(0)));
-            } catch (Exception e) {
-            }
-
-            if (unDiscount != null){
-                int zong = 0;
-                if (discount != null){
-                    zong =  unDiscount.size() + 1;
-                }else {
-                    zong = unDiscount.size();
-                }
-                int finalZong = zong;
-                pager2.setAdapter(new FragmentStateAdapter(this) {
-                    @NonNull
-                    @Override
-                    public CountTimerFragment createFragment(int position) {
-                        return fragments.get(position);
-                    }
-
-                    @Override
-                    public int getItemCount() {
-                        return finalZong;
-                    }
-                });
-
-                pager2.setCurrentItem(0);
-                pager2.setUserInputEnabled(false);
-
-            }
-            banner.setVisibility(AppContext.sInstance.getTenjinFlag() == -1 ? View.VISIBLE : View.GONE);
+//    public void initBanner() {
+//        try {
+//            if (!HomeActivity.mHomeActivity.IsPostNotice) {
+//                HomeActivity.mHomeActivity.GetActiviyNoticeMsg(() -> {
+//                    ShowBanner(HomeActivity.mHomeActivity);
+//                });
+//            } else {
+//                ShowBanner(HomeActivity.mHomeActivity);
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+//    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
+//    public void updateCopyright(String envent) {
+////        Log.e("EventBus", "BookShelveFragment--Copyright接受数据" + envent);
+//        if (envent.equals("-1")) {
+//            banner.setVisibility(View.VISIBLE);
+//        } else {
 //            banner.setVisibility(View.GONE);
-
-            banner.setOutlineProvider(new ViewOutlineProvider() { //要在加载图片之前设置这个方法
-                @Override
-                public void getOutline(View view, Outline outline) {
-                    outline.setRoundRect(0, 0, view.getWidth(), view.getHeight(), 20); //设置圆角
-                }
-            });
-
-            banner.setClipToOutline(true);
-            banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR);
-            //设置图片加载器
-            banner.setImageLoader(new ShelveBannerLoader());
-            //设置图片集合
-            banner.setImages(mHomeActivity.adList_topUp);
-            //设置轮播时间
-            banner.setDelayTime(5000);
-            banner.setOnBannerListener(new OnBannerListener() {
-                @Override
-                public void OnBannerClick(int position) {
-                    Log.e("TAG", "banner_position:" + position);
-                    if (mHomeActivity.adList_topUp != null) {
-                        if (position >= 0 && position < mHomeActivity.adList_topUp.size()) {
-                            ActiviyNoticeInfo bean = mHomeActivity.adList_topUp.get(position);
-                            if (bean != null) {
-//                                AdjustUtil.GetInstance().SendBannerEvent(5);
-                                UserBean tempBean = MMKV.defaultMMKV().decodeParcelable(SpUtil.USER_INFO, UserBean.class);
-                                //17支付活动 18新书推荐 19VIP活动 20URL活动
-                                switch (bean.getType()) {
-                                    case 17:
-                                        if (tempBean.getBindStatus().equals("0")) {
-                                            ThirdLoginActivity.start(getContext(), ThirdLoginActivity.EnterIndex.PAY);
-                                        } else {
-                                            for (int i = 0; i < beandata.getCoin_list().size(); i++) {
-                                                Log.e("Pay", (beandata.getCoin_list().get(i).getpayid() == null) + "");
-                                                Log.e("Pay", (bean.getpay_id() == null) + "");
-                                                Log.e("Pay", beandata.getCoin_list().get(i).getpayid() + "|" + bean.getpay_id());
-
-                                                if (beandata.getCoin_list().get(i).getpayid().equals(bean.getpay_id())) {
-                                                    if (SpUtil.CUR_PAYTYPE == SpUtil.PayType.GOOGLE) {
-                                                        GooglePay.GetInstance().PayForCoin(MYActivity, beandata.getCoin_list().get(i).getpayid(),
-                                                                beandata.getCoin_list().get(i).getChargeIndex(), beandata.getCoin_list().get(i).getRmb());
-                                                    } else if (SpUtil.CUR_PAYTYPE == SpUtil.PayType.CHUANYIN) {
-                                                        //sCurrencyCode
-                                                        HttpClient.getInstance().post(AllApi.paynicorn, AllApi.paynicorn)
-                                                                .params("countryCode", sCountryCode)
-                                                                .params("currency", sCurrencyCode)
-                                                                .params("amount", beandata.getCoin_list().get(i).getRmb())
-                                                                .params("coin", beandata.getCoin_list().get(i).getCoin())
-                                                                .execute(new HttpCallback() {
-                                                                    @Override
-                                                                    public void onSuccess(int code, String msg, String[] info) {
-                                                                        Log.d("TAG", "onSuccess: " + info[0]);
-                                                                        IcornPayBackBean bean = new Gson().fromJson(info[0], IcornPayBackBean.class);
-                                                                        IcornPayBackBean.PayBackItem beanContent = new Gson().fromJson(bean.getContent(), IcornPayBackBean.PayBackItem.class);
-                                                                        if (!beanContent.getStatus().equals("0")) {
-                                                                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(beanContent.getWebUrl())));
-                                                                        } else {
-                                                                            //提示重试
-                                                                        }
-
-                                                                        if (dialog.isShowing()) {
-                                                                            dialog.dismiss();
-                                                                        }
-                                                                    }
-                                                                });
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        break;
-                                    case 18:
-                                        BookDetailActivity.start(getContext(), bean.getAnid());
-                                        break;
-                                    case 19:
-                                        if (tempBean.getBindStatus().equals("0")) {
-                                            ThirdLoginActivity.start(getContext(), ThirdLoginActivity.EnterIndex.PAY);
-                                        } else {
-                                            OpenVipActivity.start(getContext());
-                                        }
-                                        break;
-                                    case 20:
-                                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(bean.gethttp_url())));
-                                        break;
-                                    default:
-                                        break;
-                                }
-                            }
-                        }
-                    }
-
-                }
-            });
-            //banner设置方法全部调用完毕时最后调用
-            banner.start();
-        }
-    }
+//        }
+//    }
+//    public void ShowBanner(HomeActivity mHomeActivity) {
+//        //如果有运营位则显示 没有则隐藏
+//        if (mHomeActivity.adList_topUp.size() > 0) {
+//            List<ActiviyNoticeInfo> list = mHomeActivity.adList_topUp;
+//            ActiviyNoticeInfo discount = null;
+//            List<ActiviyNoticeInfo> unDiscount = null;
+//            try {
+//                List<ActiviyNoticeInfo> count = list.stream().filter(s -> s.getType() == 17).collect(Collectors.toList());
+//                unDiscount = list.stream().filter(s -> s.getType() != 17).collect(Collectors.toList());
+////                for (int i = 0; i < unDiscount.size(); i++) {
+////                    fragments.add(new CountTimerFragment(unDiscount.get(i).getUrl(), mHomeActivity.adList_topUp.get(i).getType()));
+////                }
+//                int flag = new Random().nextInt(count.size());
+//                discount = count.get(flag);
+//                fragments.add(new CountTimerFragment(discount, unDiscount.get(0)));
+//            } catch (Exception e) {
+//            }
+//
+//            if (unDiscount != null){
+//                int zong = 0;
+//                if (discount != null){
+//                    zong =  unDiscount.size() + 1;
+//                }else {
+//                    zong = unDiscount.size();
+//                }
+//                int finalZong = zong;
+//                pager2.setAdapter(new FragmentStateAdapter(this) {
+//                    @NonNull
+//                    @Override
+//                    public CountTimerFragment createFragment(int position) {
+//                        return fragments.get(position);
+//                    }
+//
+//                    @Override
+//                    public int getItemCount() {
+//                        return finalZong;
+//                    }
+//                });
+//
+//                pager2.setCurrentItem(0);
+//                pager2.setUserInputEnabled(false);
+//
+//            }
+//            banner.setVisibility(AppContext.sInstance.getTenjinFlag() == -1 ? View.VISIBLE : View.GONE);
+////            banner.setVisibility(View.GONE);
+//
+//            banner.setOutlineProvider(new ViewOutlineProvider() { //要在加载图片之前设置这个方法
+//                @Override
+//                public void getOutline(View view, Outline outline) {
+//                    outline.setRoundRect(0, 0, view.getWidth(), view.getHeight(), 20); //设置圆角
+//                }
+//            });
+//
+//            banner.setClipToOutline(true);
+//            banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR);
+//            //设置图片加载器
+//            banner.setImageLoader(new ShelveBannerLoader());
+//            //设置图片集合
+//            banner.setImages(mHomeActivity.adList_topUp);
+//            //设置轮播时间
+//            banner.setDelayTime(5000);
+//            banner.setOnBannerListener(new OnBannerListener() {
+//                @Override
+//                public void OnBannerClick(int position) {
+//                    Log.e("TAG", "banner_position:" + position);
+//                    if (mHomeActivity.adList_topUp != null) {
+//                        if (position >= 0 && position < mHomeActivity.adList_topUp.size()) {
+//                            ActiviyNoticeInfo bean = mHomeActivity.adList_topUp.get(position);
+//                            if (bean != null) {
+////                                AdjustUtil.GetInstance().SendBannerEvent(5);
+//                                UserBean tempBean = MMKV.defaultMMKV().decodeParcelable(SpUtil.USER_INFO, UserBean.class);
+//                                //17支付活动 18新书推荐 19VIP活动 20URL活动
+//                                switch (bean.getType()) {
+//                                    case 17:
+//                                        if (tempBean.getBindStatus().equals("0")) {
+//                                            ThirdLoginActivity.start(getContext(), ThirdLoginActivity.EnterIndex.PAY);
+//                                        } else {
+//                                            for (int i = 0; i < beandata.getCoin_list().size(); i++) {
+//                                                Log.e("Pay", (beandata.getCoin_list().get(i).getpayid() == null) + "");
+//                                                Log.e("Pay", (bean.getpay_id() == null) + "");
+//                                                Log.e("Pay", beandata.getCoin_list().get(i).getpayid() + "|" + bean.getpay_id());
+//
+//                                                if (beandata.getCoin_list().get(i).getpayid().equals(bean.getpay_id())) {
+//                                                    if (SpUtil.CUR_PAYTYPE == SpUtil.PayType.GOOGLE) {
+//                                                        GooglePay.GetInstance().PayForCoin(MYActivity, beandata.getCoin_list().get(i).getpayid(),
+//                                                                beandata.getCoin_list().get(i).getChargeIndex(), beandata.getCoin_list().get(i).getRmb());
+//                                                    } else if (SpUtil.CUR_PAYTYPE == SpUtil.PayType.CHUANYIN) {
+//                                                        //sCurrencyCode
+//                                                        HttpClient.getInstance().post(AllApi.paynicorn, AllApi.paynicorn)
+//                                                                .params("countryCode", sCountryCode)
+//                                                                .params("currency", sCurrencyCode)
+//                                                                .params("amount", beandata.getCoin_list().get(i).getRmb())
+//                                                                .params("coin", beandata.getCoin_list().get(i).getCoin())
+//                                                                .execute(new HttpCallback() {
+//                                                                    @Override
+//                                                                    public void onSuccess(int code, String msg, String[] info) {
+//                                                                        Log.d("TAG", "onSuccess: " + info[0]);
+//                                                                        IcornPayBackBean bean = new Gson().fromJson(info[0], IcornPayBackBean.class);
+//                                                                        IcornPayBackBean.PayBackItem beanContent = new Gson().fromJson(bean.getContent(), IcornPayBackBean.PayBackItem.class);
+//                                                                        if (!beanContent.getStatus().equals("0")) {
+//                                                                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(beanContent.getWebUrl())));
+//                                                                        } else {
+//                                                                            //提示重试
+//                                                                        }
+//
+//                                                                        if (dialog.isShowing()) {
+//                                                                            dialog.dismiss();
+//                                                                        }
+//                                                                    }
+//                                                                });
+//                                                    }
+//                                                }
+//                                            }
+//                                        }
+//                                        break;
+//                                    case 18:
+//                                        BookDetailActivity.start(getContext(), bean.getAnid());
+//                                        break;
+//                                    case 19:
+//                                        if (tempBean.getBindStatus().equals("0")) {
+//                                            ThirdLoginActivity.start(getContext(), ThirdLoginActivity.EnterIndex.PAY);
+//                                        } else {
+//                                            OpenVipActivity.start(getContext());
+//                                        }
+//                                        break;
+//                                    case 20:
+//                                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(bean.gethttp_url())));
+//                                        break;
+//                                    default:
+//                                        break;
+//                                }
+//                            }
+//                        }
+//                    }
+//
+//                }
+//            });
+//            //banner设置方法全部调用完毕时最后调用
+//            banner.start();
+//        }
+//    }
 
     private void initCoinRv() {
         adapter = new BuyCoinAdapter(getContext());
@@ -366,7 +366,7 @@ public final class TopUpActivity extends MyActivity implements KeyboardWatcher.S
         }
 
         coin.setText(bean.getCoin() + "");
-        adapter.setData(bean.getCoin_list().subList(0,bean.getCoin_list().size()-2 ));
+        adapter.setData(bean.getCoin_list().subList(0,bean.getCoin_list().size() ));
 
         if (!checkVip()) {
             //添加 视频广告按钮
