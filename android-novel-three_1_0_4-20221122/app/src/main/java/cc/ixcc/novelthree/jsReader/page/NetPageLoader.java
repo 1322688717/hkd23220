@@ -11,6 +11,7 @@ import cc.ixcc.novelthree.jsReader.utils.FileUtils;
 import cc.ixcc.novelthree.jsReader.utils.StringUtils;
 import cc.ixcc.novelthree.utils.SpUtil;
 import cc.ixcc.novelthree.utils.StringUtil;
+
 import com.tencent.mmkv.MMKV;
 
 import java.io.BufferedReader;
@@ -50,7 +51,9 @@ public class NetPageLoader extends PageLoader {
 
     @Override
     public void refreshChapterList(boolean b) {
-        if (mCollBook.getBookChapters() == null) return;
+        if (mCollBook.getBookChapters() == null) {
+            return;
+        }
 
         // 将 BookChapter 转换成当前可用的 Chapter
         mChapterList = convertTxtChapter(mCollBook.getBookChapters());
@@ -62,7 +65,7 @@ public class NetPageLoader extends PageLoader {
         }
 
         // 如果章节未打开
-        if (!isChapterOpen()||!b) {
+        if (!isChapterOpen() || !b) {
             // 打开章节
             openChapter();
         }

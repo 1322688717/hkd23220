@@ -649,12 +649,12 @@ public abstract class PageLoader {
         if (mBookRecord == null) {
             mBookRecord = new BookRecordBean();
         }
-//        Log.e("TAG", "mBookRecord: " + mBookRecord.getChapter() + " ,start " + mStartChapter);
-//        if (mBookRecord.getChapter() != mStartChapter) {
-//            mBookRecord.setChapter(mStartChapter > 0 ? mStartChapter : 0);
-//            mBookRecord.setPagePos(0);
-//        }
-//        Log.e("TAG", "mBookRecord: " + mStartChapter);
+        Log.e("TAG", "mBookRecord: " + mBookRecord.getChapter() + " ,start " + mStartChapter);
+        if (mBookRecord.getChapter() != mStartChapter) {
+            mBookRecord.setChapter(mStartChapter > 0 ? mStartChapter : 0);
+            mBookRecord.setPagePos(0);
+        }
+        Log.e("TAG", "mBookRecord: " + mStartChapter);
 
         mCurChapterPos = mBookRecord.getChapter();
         mLastChapterPos = mCurChapterPos;
